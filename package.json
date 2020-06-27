@@ -1,0 +1,87 @@
+{
+  "name": "material-ui-bootstrap",
+  "version": "0.0.2",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claytonfbell/material-ui-bootstrap.git"
+  },
+  "author": "Clayton Bell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claytonfbell/material-ui-bootstrap/issues"
+  },
+  "homepage": "https://github.com/claytonfbell/material-ui-bootstrap#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
+  },
+  "types": "dist/lib.d.ts",
+  "main": "dist/lib.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist && tsc --noEmit false --emitDeclarationOnly &&  babel src --extensions \".ts,.tsx\" -d dist --copy-files",
+    "toc": "markdown-toc -i README.md"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@date-io/moment": "^1.3.13",
+    "@material-ui/core": "^4.9.3",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.43",
+    "@material-ui/pickers": "^3.2.10",
+    "country-region-data": "^1.5.1",
+    "draft-js": "^0.11.4",
+    "draft-js-export-markdown": "^1.4.0",
+    "draft-js-import-markdown": "^1.4.0",
+    "i18n-iso-countries": "^4.3.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "git://github.com/moment/moment-timezone.git#develop",
+    "react-draft-wysiwyg": "^1.14.4"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.9.1",
+    "@types/lodash": "^4.14.149",
+    "@types/moment-timezone": "^0.5.12",
+    "@types/node": "^12.12.28",
+    "@types/react": "^16.9.21",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-draft-wysiwyg": "^1.13.0",
+    "markdown-toc": "^1.2.0",
+    "material-ui-pack": "^0.2.23",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0",
+    "typescript": "^3.8.2"
+  }
+}
