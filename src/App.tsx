@@ -1,4 +1,10 @@
-import { Container, CssBaseline, Paper, ThemeProvider } from "@material-ui/core"
+import {
+  Container,
+  CssBaseline,
+  Paper,
+  ThemeProvider,
+  Typography,
+} from "@material-ui/core"
 import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import React from "react"
 import AlertExample from "./examples/AlertExample"
@@ -21,6 +27,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
         <CssBaseline />
+        <Typography variant="h2" component="h1">
+          Examples
+        </Typography>
         <DarkModeToggle />
         <br />
         <br />
