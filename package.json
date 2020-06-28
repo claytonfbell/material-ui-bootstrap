@@ -24,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist && tsc --noEmit false --emitDeclarationOnly &&  babel src --extensions \".ts,.tsx,.js,.jsx\" -d dist --copy-files --plugins @babel/plugin-transform-modules-commonjs",
@@ -84,6 +85,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
+    "react-snap": "^1.23.0",
     "typescript": "^3.8.2"
   }
 }

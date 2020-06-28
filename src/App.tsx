@@ -27,11 +27,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
         <CssBaseline />
-        <Typography variant="h2" component="h1">
-          Examples
+        <br />
+        <Typography variant="h3" component="h1">
+          material-ui-bootstrap
         </Typography>
         <DarkModeToggle />
-        <br />
         <br />
         <Paper style={{ padding: 20 }} elevation={4}>
           <ButtonExample />
