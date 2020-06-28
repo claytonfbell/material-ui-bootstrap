@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core"
+import Grid from "@material-ui/core/Grid"
 import SaveIcon from "@material-ui/icons/Save"
 import React from "react"
 import { bootstrapColors } from "../Alert"

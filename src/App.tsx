@@ -1,13 +1,15 @@
-import {
-  Container,
-  CssBaseline,
-  Grid,
-  Paper,
-  ThemeProvider,
-  Typography,
-} from "@material-ui/core"
+import Container from "@material-ui/core/Container"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Grid from "@material-ui/core/Grid"
+import Paper from "@material-ui/core/Paper"
+import { ThemeProvider } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
 import GitHubIcon from "@material-ui/icons/GitHub"
-import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
+import {
+  DarkModeProvider,
+  useDarkMode,
+} from "material-ui-pack/dist/DarkModeProvider"
+import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
 import React from "react"
 import Button from "./Button"
 import AlertExample from "./examples/AlertExample"

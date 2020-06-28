@@ -1,7 +1,7 @@
 /**
  * Emulates the bootstrap alert boxes
  */
-import { fade, lighten } from "@material-ui/core"
+import { fade, lighten } from "@material-ui/core/styles/colorManipulator"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import React from "react"
 
