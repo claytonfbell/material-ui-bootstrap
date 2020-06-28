@@ -11,6 +11,7 @@ Why? Because I love the [Material UI](https://material-ui.com/) api but I've nev
 
 - [Install](#install)
 - [Button](#button)
+- [Alert](#alert)
 
 <!-- tocstop -->
 
