@@ -19,9 +19,6 @@ Why? Because I love the [Material UI](https://material-ui.com/) api but I've nev
 ```bash
 # npm
 npm i material-ui-bootstrap
-
-# yarn
-yarn add material-ui-bootstrap
 ```
 
 ## Button
@@ -47,5 +44,16 @@ export default function App() {
       Success
     </Button>
   )
+}
+```
+
+## Alert
+
+```tsx
+import React from "react"
+import { Alert } from "material-ui-bootstrap"
+
+export default function App() {
+  return <Alert color="success">Success message here</Alert>
 }
 ```

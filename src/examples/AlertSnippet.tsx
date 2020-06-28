@@ -5,11 +5,9 @@ export default function AlertSnippet() {
   const codeString = `
 import React from "react"
 import { Alert } from "material-ui-bootstrap"
-
-export default function AlertExample() {
-  return (
-    <Alert color="danger">My example alert message</Alert>
-  )
+  
+export default function App() {
+  return <Alert color="success">Success message here</Alert>
 }
 `
   return (
