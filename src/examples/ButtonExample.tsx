@@ -3,6 +3,7 @@ import SaveIcon from "@material-ui/icons/Save"
 import React from "react"
 import { bootstrapColors } from "../Alert"
 import Button from "../Button"
+import ButtonSnippet from "./ButtonSnippet"
 
 export default function ButtonExample() {
   return (
@@ -64,6 +65,7 @@ export default function ButtonExample() {
         </Grid>
       </Grid>
       <br />
+      <ButtonSnippet />
       <br />
     </>
   )

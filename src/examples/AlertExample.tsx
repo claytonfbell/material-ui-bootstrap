@@ -1,5 +1,6 @@
 import React from "react"
 import Alert, { bootstrapColors } from "../Alert"
+import AlertSnippet from "./AlertSnippet"
 
 export default function AlertExample() {
   return (
@@ -11,6 +12,7 @@ export default function AlertExample() {
           <br />
         </React.Fragment>
       ))}
+      <AlertSnippet />
     </>
   )
 }

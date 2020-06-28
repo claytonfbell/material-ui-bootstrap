@@ -51,6 +51,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.43",
     "@material-ui/pickers": "^3.2.10",
+    "@types/react-syntax-highlighter": "^11.0.4",
     "country-region-data": "^1.5.1",
     "draft-js": "^0.11.4",
     "draft-js-export-markdown": "^1.4.0",
@@ -59,7 +60,9 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "moment-timezone": "git://github.com/moment/moment-timezone.git#develop",
-    "react-draft-wysiwyg": "^1.14.4"
+    "react-draft-wysiwyg": "^1.14.4",
+    "react-markdown": "^4.3.1",
+    "react-syntax-highlighter": "^12.2.1"
   },
   "peerDependencies": {
     "react": "^16.12.0",
