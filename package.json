@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/claytonfbell/material-ui-bootstrap/issues"
   },
-  "homepage": "https://github.com/claytonfbell/material-ui-bootstrap#readme",
+  "homepage": "https://material-ui-bootstrap.xyz",
   "babel": {
     "presets": [
       "@babel/preset-react",
