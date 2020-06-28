@@ -23,16 +23,7 @@ npm i material-ui-bootstrap
 
 ## Button
 
-Drop this in place of the material-ui `Button`. The `color` prop supports:
-
-- primary
-- secondary
-- success
-- danger
-- warning
-- info
-- light
-- dark
+Drop this in place of the material-ui `Button`. You may use the following color props: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`.
 
 ```tsx
 import React from "react"
