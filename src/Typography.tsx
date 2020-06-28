@@ -11,22 +11,22 @@ const useStyles = makeStyles((theme: Theme) => {
     }
   } = {
     primary: {
-      color: theme.palette.primary.dark,
+      color: theme.palette.primary.main,
     },
     secondary: {
-      color: theme.palette.secondary.dark,
+      color: theme.palette.secondary.main,
     },
     success: {
-      color: "#155724",
+      color: "#218838",
     },
     danger: {
-      color: "#721c24",
+      color: "#c82333",
     },
     warning: {
-      color: "#856404",
+      color: "#e0a800",
     },
     info: {
-      color: "#0c5460",
+      color: "#138496",
     },
     light: {
       color: theme.palette.text.secondary,

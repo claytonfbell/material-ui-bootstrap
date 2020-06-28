@@ -7,12 +7,10 @@ import TypographySnippet from "./TypographySnippet"
 export default function TypographyExample() {
   return (
     <>
-      <br />
-      <br />
       <Grid container spacing={3}>
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={6} sm={3}>
               <Typography color={color}>{color}</Typography>
             </Grid>
           </React.Fragment>

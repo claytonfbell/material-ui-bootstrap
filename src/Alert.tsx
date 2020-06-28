@@ -19,39 +19,48 @@ export type BootstrapColor =
 const useStyles = makeStyles((theme) => {
   const bootstrapColors: {
     [key in BootstrapColor]: {
+      color: string
       backgroundColor: string
       borderColor: string
     }
   } = {
     primary: {
+      color: theme.palette.primary.dark,
       backgroundColor: fade(lighten(theme.palette.primary.light, 0.7), 0.8),
       borderColor: fade(lighten(theme.palette.primary.light, 0.5), 0.8),
     },
     secondary: {
+      color: theme.palette.secondary.dark,
       backgroundColor: fade(lighten(theme.palette.secondary.light, 0.7), 0.8),
       borderColor: fade(lighten(theme.palette.secondary.light, 0.5), 0.8),
     },
     success: {
+      color: "#155724",
       backgroundColor: fade("#d4edda", 0.8),
       borderColor: fade("#c3e6cb", 0.8),
     },
     danger: {
+      color: "#721c24",
       backgroundColor: fade("#f8d7da", 0.8),
       borderColor: fade("#f5c6cb", 0.8),
     },
     warning: {
+      color: "#856404",
       backgroundColor: fade("#fff3cd", 0.8),
       borderColor: fade("#ffeeba", 0.8),
     },
     info: {
+      color: "#0c5460",
       backgroundColor: fade("#d1ecf1", 0.8),
       borderColor: fade("#bee5eb", 0.8),
     },
     light: {
+      color: theme.palette.text.secondary,
       backgroundColor: theme.palette.background.paper,
       borderColor: fade(theme.palette.text.secondary, 0.1),
     },
     dark: {
+      color: theme.palette.text.primary,
       backgroundColor: fade(theme.palette.text.primary, 0.25),
       borderColor: fade(theme.palette.text.primary, 0.2),
     },
@@ -63,6 +72,7 @@ const useStyles = makeStyles((theme) => {
 
   return {
     root: {
+      color: (x: Props) => getColor(x).color,
       backgroundColor: (x: Props) => getColor(x).backgroundColor,
       borderColor: (x: Props) => getColor(x).borderColor,
       position: "relative",
@@ -70,6 +80,9 @@ const useStyles = makeStyles((theme) => {
       padding: ".75rem 1.25rem",
       borderRadius: ".25rem",
       width: "100%",
+      "& a": {
+        color: (x: Props) => getColor(x).color,
+      },
     },
   }
 })
@@ -94,7 +107,7 @@ function Alert(props: Props) {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
-      <Typography color={props.color}>{props.children}</Typography>
+      <Typography color="inherit">{props.children}</Typography>
     </div>
   )
 }

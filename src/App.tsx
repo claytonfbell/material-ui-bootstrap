@@ -1,9 +1,7 @@
 import Container from "@material-ui/core/Container"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
-import Paper from "@material-ui/core/Paper"
 import { ThemeProvider } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import {
   DarkModeProvider,
@@ -11,10 +9,12 @@ import {
 } from "material-ui-pack/dist/DarkModeProvider"
 import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
 import React from "react"
+import Alert from "./Alert"
 import Button from "./Button"
 import AlertExample from "./examples/AlertExample"
 import ButtonExample from "./examples/ButtonExample"
 import TypographyExample from "./examples/TypographyExample"
+import Typography from "./Typography"
 
 function App() {
   const { createMuiThemeWithDarkMode } = useDarkMode()
@@ -36,10 +36,28 @@ function App() {
         <br />
         <Grid container justify="space-between">
           <Grid>
-            <Typography variant="h3" component="h1">
+            <Typography variant="h3" component="h1" color="dark">
               material-ui-bootstrap
             </Typography>
-            <code>npm install material-ui-bootstrap</code>
+            <br />
+            <Alert color="light">
+              <a href="https://badge.fury.io/js/material-ui-bootstrap">
+                <img
+                  src="https://badge.fury.io/js/material-ui-bootstrap.svg"
+                  alt="npm version"
+                />
+              </a>
+              &nbsp;
+              <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
+                <img
+                  src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
+                  alt="Build Status"
+                />
+              </a>
+              <div>
+                <code>npm install material-ui-bootstrap</code>
+              </div>
+            </Alert>
             <br />
             <br />
             <DarkModeToggle />
@@ -56,31 +74,25 @@ function App() {
           </Grid>
         </Grid>
         <br />
-        <Paper style={{ padding: 20 }} elevation={4}>
-          <Typography variant="h4" component="h2">
-            Button
-          </Typography>
+        <Alert color="light">
+          <Alert.Heading>Button</Alert.Heading>
+          <br />
           <ButtonExample />
-        </Paper>
+        </Alert>
         <br />
         <br />
-        <Paper style={{ padding: 20 }} elevation={4}>
-          <Typography variant="h4" component="h2">
-            Alert
-          </Typography>
+        <Alert color="light">
+          <Alert.Heading>Alert</Alert.Heading>
           <br />
           <AlertExample />
-        </Paper>
-
+        </Alert>
         <br />
         <br />
-        <Paper style={{ padding: 20 }} elevation={4}>
-          <Typography variant="h4" component="h2">
-            Typography
-          </Typography>
+        <Alert color="light">
+          <Alert.Heading>Typography</Alert.Heading>
           <br />
           <TypographyExample />
-        </Paper>
+        </Alert>
       </Container>
     </ThemeProvider>
   )
