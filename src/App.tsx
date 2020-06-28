@@ -14,6 +14,7 @@ import React from "react"
 import Button from "./Button"
 import AlertExample from "./examples/AlertExample"
 import ButtonExample from "./examples/ButtonExample"
+import TypographyExample from "./examples/TypographyExample"
 
 function App() {
   const { createMuiThemeWithDarkMode } = useDarkMode()
@@ -68,8 +69,17 @@ function App() {
             Alert
           </Typography>
           <br />
-
           <AlertExample />
+        </Paper>
+
+        <br />
+        <br />
+        <Paper style={{ padding: 20 }} elevation={4}>
+          <Typography variant="h4" component="h2">
+            Typography
+          </Typography>
+          <br />
+          <TypographyExample />
         </Paper>
       </Container>
     </ThemeProvider>

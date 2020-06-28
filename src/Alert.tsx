@@ -4,6 +4,7 @@
 import { fade, lighten } from "@material-ui/core/styles/colorManipulator"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import React from "react"
+import Typography from "./Typography"
 
 export type BootstrapColor =
   | "primary"
@@ -18,50 +19,41 @@ export type BootstrapColor =
 const useStyles = makeStyles((theme) => {
   const bootstrapColors: {
     [key in BootstrapColor]: {
-      color: string
       backgroundColor: string
       borderColor: string
     }
   } = {
     primary: {
-      color: theme.palette.primary.dark,
       backgroundColor: fade(lighten(theme.palette.primary.light, 0.7), 0.8),
       borderColor: fade(lighten(theme.palette.primary.light, 0.5), 0.8),
     },
     secondary: {
-      color: theme.palette.secondary.dark,
       backgroundColor: fade(lighten(theme.palette.secondary.light, 0.7), 0.8),
       borderColor: fade(lighten(theme.palette.secondary.light, 0.5), 0.8),
     },
     success: {
-      color: "#155724",
       backgroundColor: fade("#d4edda", 0.8),
       borderColor: fade("#c3e6cb", 0.8),
     },
     danger: {
-      color: "#721c24",
       backgroundColor: fade("#f8d7da", 0.8),
       borderColor: fade("#f5c6cb", 0.8),
     },
     warning: {
-      color: "#856404",
       backgroundColor: fade("#fff3cd", 0.8),
       borderColor: fade("#ffeeba", 0.8),
     },
     info: {
-      color: "#0c5460",
       backgroundColor: fade("#d1ecf1", 0.8),
       borderColor: fade("#bee5eb", 0.8),
     },
     light: {
-      color: theme.palette.text.disabled,
-      backgroundColor: fade(theme.palette.background.default, 0.8),
-      borderColor: theme.palette.divider,
+      backgroundColor: theme.palette.background.paper,
+      borderColor: fade(theme.palette.text.secondary, 0.1),
     },
     dark: {
-      color: theme.palette.background.default,
-      backgroundColor: fade(theme.palette.text.secondary, 0.8),
-      borderColor: theme.palette.divider,
+      backgroundColor: fade(theme.palette.text.primary, 0.25),
+      borderColor: fade(theme.palette.text.primary, 0.2),
     },
   }
 
@@ -72,7 +64,6 @@ const useStyles = makeStyles((theme) => {
   return {
     root: {
       backgroundColor: (x: Props) => getColor(x).backgroundColor,
-      color: (x: Props) => getColor(x).color,
       borderColor: (x: Props) => getColor(x).borderColor,
       position: "relative",
       border: "1px solid",
@@ -99,10 +90,25 @@ interface Props {
   color?: BootstrapColor
 }
 
-export default function Alert(props: Props) {
+function Alert(props: Props) {
   const classes = useStyles(props)
-  return <div className={classes.root}>{props.children}</div>
+  return (
+    <div className={classes.root}>
+      <Typography color={props.color}>{props.children}</Typography>
+    </div>
+  )
 }
-Alert.defaultProps = {
-  variant: "danger",
+
+interface HeadingProps {
+  children: React.ReactNode
 }
+function Heading(props: HeadingProps) {
+  return (
+    <Typography color="inherit" variant="h5" component="h2">
+      {props.children}
+    </Typography>
+  )
+}
+
+Alert.Heading = Heading
+export default Alert

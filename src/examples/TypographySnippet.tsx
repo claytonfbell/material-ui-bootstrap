@@ -1,18 +1,13 @@
 import React from "react"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
-export default function AlertSnippet() {
+export default function TypographySnippet() {
   const codeString = `
   import React from "react"
-  import { Alert } from "material-ui-bootstrap"
+  import { Typography } from "material-ui-bootstrap"
   
-  export default function App() {
-    return (
-      <Alert color="danger">
-        <Alert.Heading>Heading</Alert.Heading>
-        Alert danger
-      </Alert>
-    )
+  export default function TypographyExample() {
+    return <Typography color="success">Example</Typography>
   }
 `
   return (

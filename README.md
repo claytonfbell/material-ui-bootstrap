@@ -46,6 +46,22 @@ import React from "react"
 import { Alert } from "material-ui-bootstrap"
 
 export default function App() {
-  return <Alert color="success">Success message here</Alert>
+  return (
+    <Alert color="danger">
+      <Alert.Heading>Heading</Alert.Heading>
+      Alert danger
+    </Alert>
+  )
+}
+```
+
+## Typography
+
+```tsx
+import React from "react"
+import { Typography } from "material-ui-bootstrap"
+
+export default function TypographyExample() {
+  return <Typography color="success">Example</Typography>
 }
 ```
