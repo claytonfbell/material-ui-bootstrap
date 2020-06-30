@@ -66,3 +66,22 @@ export default function TypographyExample() {
   return <Typography color="success">Example</Typography>
 }
 ```
+
+## Card
+
+```tsx
+import React from "react"
+import Card, { CardContent, CardHeader, CardTitle } from "material-ui-bootstrap"
+
+export default function CardExample() {
+  return (
+    <Card color="success">
+      <CardHeader>CardHeader</CardHeader>
+      <CardContent>
+        <CardTitle>Title</CardTitle>
+        Example card content.
+      </CardContent>
+    </Card>
+  )
+}
+```

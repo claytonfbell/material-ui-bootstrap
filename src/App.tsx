@@ -13,6 +13,7 @@ import Alert from "./Alert"
 import Button from "./Button"
 import AlertExample from "./examples/AlertExample"
 import ButtonExample from "./examples/ButtonExample"
+import CardExample from "./examples/CardExample"
 import TypographyExample from "./examples/TypographyExample"
 import Typography from "./Typography"
 
@@ -92,6 +93,13 @@ function App() {
           <Alert.Heading>Typography</Alert.Heading>
           <br />
           <TypographyExample />
+        </Alert>
+        <br />
+        <br />
+        <Alert color="light">
+          <Alert.Heading>Card</Alert.Heading>
+          <br />
+          <CardExample />
         </Alert>
       </Container>
     </ThemeProvider>
