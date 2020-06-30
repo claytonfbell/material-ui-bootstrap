@@ -7,10 +7,10 @@ import ButtonSnippet from "./ButtonSnippet"
 export default function ButtonExample() {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justify="space-between">
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
-            <Grid item xs={4} md={2} justify="space-between">
+            <Grid item xs={4} md={2}>
               <Button variant="contained" color={color}>
                 {color}
               </Button>
