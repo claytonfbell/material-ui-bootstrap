@@ -10,7 +10,7 @@ export default function ButtonExample() {
       <Grid container spacing={2}>
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
-            <Grid item xs={4} md={2}>
+            <Grid item xs={4} md={2} justify="space-between">
               <Button variant="contained" color={color}>
                 {color}
               </Button>
