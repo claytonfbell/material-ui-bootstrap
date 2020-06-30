@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/material-ui-bootstrap.svg)](https://badge.fury.io/js/material-ui-bootstrap)
 [![Build Status](https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master)](https://travis-ci.org/claytonfbell/material-ui-bootstrap)
 
-Why? Because I love the [Material UI](https://material-ui.com/) api but I've never been sold on the all-caps buttons miss the color variants available.
+If you prefer the [Material UI](https://material-ui.com/) api but also like Bootstrap's clean buttons and useful color variants then this package is here for you. It wraps material-ui's `<Button>` and `<Card>` and `<Typography>` components and adds a new component `<Alert>`. Inspired by <https://react-bootstrap.github.io>.
 
 [DEMO HERE](https://material-ui-bootstrap.xyz)
 
@@ -13,6 +13,7 @@ Why? Because I love the [Material UI](https://material-ui.com/) api but I've nev
 - [Button](#button)
 - [Alert](#alert)
 - [Typography](#typography)
+- [Card](#card)
 
 <!-- tocstop -->
 
