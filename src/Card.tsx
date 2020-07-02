@@ -1,4 +1,4 @@
-import MUICard, { CardProps } from "@material-ui/core/Card"
+import MUICard, { CardProps as MUICardProps } from "@material-ui/core/Card"
 import { Theme } from "@material-ui/core/styles"
 import { fade } from "@material-ui/core/styles/colorManipulator"
 import makeStyles from "@material-ui/styles/makeStyles"
@@ -51,16 +51,16 @@ const useStyles = makeStyles((theme: Theme) => {
     },
   }
 
-  function getColor(x: Props) {
+  function getColor(x: CardProps) {
     return bootstrapColors[x.color === undefined ? "light" : x.color]
   }
 
   return {
     root: {
-      backgroundColor: (x: Props) => getColor(x).backgroundColor,
-      color: (x: Props) => getColor(x).color,
+      backgroundColor: (x: CardProps) => getColor(x).backgroundColor,
+      color: (x: CardProps) => getColor(x).color,
       "& a": {
-        color: (x: Props) => getColor(x).backgroundColor,
+        color: (x: CardProps) => getColor(x).backgroundColor,
         fontWeight: "bolder",
         textDecoration: "none",
         "&:hover": {
@@ -73,12 +73,15 @@ const useStyles = makeStyles((theme: Theme) => {
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
-type Props = Omit<CardProps, "color"> & {
+export type CardProps = Omit<MUICardProps, "color"> & {
   color?: BootstrapColor
   //   component?: any
 }
 
-const Card = React.forwardRef(function BootstrapButton(props: Props, ref: any) {
+const Card = React.forwardRef(function BootstrapButton(
+  props: CardProps,
+  ref: any
+) {
   const classes = useStyles(props)
   const { color, ...otherProps } = props
 
@@ -88,7 +91,7 @@ const Card = React.forwardRef(function BootstrapButton(props: Props, ref: any) {
 })
 export default Card
 
-interface CardHeaderProps {
+export interface CardHeaderProps {
   children: React.ReactNode
 }
 
@@ -107,7 +110,7 @@ export function CardHeader(props: CardHeaderProps) {
   )
 }
 
-interface CardTitleProps {
+export interface CardTitleProps {
   children: React.ReactNode
 }
 export function CardTitle(props: CardTitleProps) {

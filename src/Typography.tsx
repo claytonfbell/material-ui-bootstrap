@@ -1,5 +1,7 @@
 import { Theme } from "@material-ui/core/styles"
-import MUITypography, { TypographyProps } from "@material-ui/core/Typography"
+import MUITypography, {
+  TypographyProps as MUITypographyProps,
+} from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/styles/makeStyles"
 import React from "react"
 import { BootstrapColor } from "./Alert"
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) => {
     },
   }
 
-  function getColor(x: Props) {
+  function getColor(x: TypographyProps) {
     return x.color === "inherit"
       ? { color: undefined }
       : bootstrapColors[x.color === undefined ? "dark" : x.color]
@@ -44,9 +46,9 @@ const useStyles = makeStyles((theme: Theme) => {
 
   return {
     root: {
-      color: (x: Props) => getColor(x).color,
+      color: (x: TypographyProps) => getColor(x).color,
       "& a": {
-        color: (x: Props) => getColor(x).color,
+        color: (x: TypographyProps) => getColor(x).color,
         fontWeight: "bolder",
         textDecoration: "none",
         "&:hover": {
@@ -59,13 +61,13 @@ const useStyles = makeStyles((theme: Theme) => {
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
-type Props = Omit<TypographyProps, "color"> & {
+export type TypographyProps = Omit<MUITypographyProps, "color"> & {
   color?: BootstrapColor | "inherit"
   component?: any
 }
 
 const Typography = React.forwardRef(function BootstrapButton(
-  props: Props,
+  props: TypographyProps,
   ref: any
 ) {
   const classes = useStyles(props)

@@ -66,22 +66,22 @@ const useStyles = makeStyles((theme) => {
     },
   }
 
-  function getColor(x: Props) {
+  function getColor(x: AlertProps) {
     return bootstrapColors[x.color === undefined ? "danger" : x.color]
   }
 
   return {
     root: {
-      color: (x: Props) => getColor(x).color,
-      backgroundColor: (x: Props) => getColor(x).backgroundColor,
-      borderColor: (x: Props) => getColor(x).borderColor,
+      color: (x: AlertProps) => getColor(x).color,
+      backgroundColor: (x: AlertProps) => getColor(x).backgroundColor,
+      borderColor: (x: AlertProps) => getColor(x).borderColor,
       position: "relative",
       border: "1px solid",
       padding: ".75rem 1.25rem",
       borderRadius: ".25rem",
       width: "100%",
       "& a": {
-        color: (x: Props) => getColor(x).color,
+        color: (x: AlertProps) => getColor(x).color,
       },
     },
   }
@@ -98,12 +98,12 @@ export const bootstrapColors: BootstrapColor[] = [
   "dark",
 ]
 
-interface Props {
+export interface AlertProps {
   children: React.ReactNode
   color?: BootstrapColor
 }
 
-function Alert(props: Props) {
+function Alert(props: AlertProps) {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
@@ -112,10 +112,10 @@ function Alert(props: Props) {
   )
 }
 
-interface HeadingProps {
+export interface AlertHeadingProps {
   children: React.ReactNode
 }
-function Heading(props: HeadingProps) {
+function Heading(props: AlertHeadingProps) {
   return (
     <Typography color="inherit" variant="h5" component="h2">
       {props.children}

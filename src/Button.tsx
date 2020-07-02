@@ -1,4 +1,6 @@
-import MUIButton, { ButtonProps } from "@material-ui/core/Button"
+import MUIButton, {
+  ButtonProps as MUIButtonProps,
+} from "@material-ui/core/Button"
 import { Theme } from "@material-ui/core/styles"
 import {
   darken,
@@ -50,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) => {
     },
   }
 
-  function getColor(x: Props) {
+  function getColor(x: ButtonProps) {
     return bootstrapColors[x.color === undefined ? "dark" : x.color]
   }
 
@@ -66,31 +68,31 @@ const useStyles = makeStyles((theme: Theme) => {
         opacity: 0.3,
       },
       "&.MuiButton-contained": {
-        color: (x: Props) => getColor(x).contrastText,
-        backgroundColor: (x: Props) => getColor(x).main,
-        border: (x: Props) =>
+        color: (x: ButtonProps) => getColor(x).contrastText,
+        backgroundColor: (x: ButtonProps) => getColor(x).main,
+        border: (x: ButtonProps) =>
           `1px solid ${fade(darken(getColor(x).main, 0.3), 0.3)}`,
         "&:hover": {
-          backgroundColor: (x: Props) => darken(getColor(x).main, 0.25),
+          backgroundColor: (x: ButtonProps) => darken(getColor(x).main, 0.25),
         },
       },
       "&.MuiButton-outlined,&.MuiButton-text": {
-        color: (x: Props) =>
+        color: (x: ButtonProps) =>
           x.color === "light" ? getColor(x).contrastText : getColor(x).main,
-        borderColor: (x: Props) =>
+        borderColor: (x: ButtonProps) =>
           x.color === "light"
             ? fade(darken(getColor(x).main, 0.3), 0.3)
             : getColor(x).main,
         "&:hover": {
-          backgroundColor: (x: Props) =>
+          backgroundColor: (x: ButtonProps) =>
             x.color === "light"
               ? fade(lighten(getColor(x).contrastText, 0.2), 0.15)
               : fade(lighten(getColor(x).main, 0.2), 0.15),
-          borderColor: (x: Props) =>
+          borderColor: (x: ButtonProps) =>
             x.color === "light"
               ? lighten(getColor(x).contrastText, 0.5)
               : lighten(getColor(x).main, 0.5),
-          color: (x: Props) =>
+          color: (x: ButtonProps) =>
             x.color === "light"
               ? lighten(getColor(x).contrastText, 0.3)
               : lighten(getColor(x).main, 0.3),
@@ -105,14 +107,14 @@ const useStyles = makeStyles((theme: Theme) => {
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
-type Props = Omit<ButtonProps, "color"> & {
+export type ButtonProps = Omit<MUIButtonProps, "color"> & {
   color?: BootstrapColor
   component?: any
   to?: string
 }
 
 const Button = React.forwardRef(function BootstrapButton(
-  props: Props,
+  props: ButtonProps,
   ref: any
 ) {
   const classes = useStyles(props)
