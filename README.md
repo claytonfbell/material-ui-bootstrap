@@ -20,7 +20,6 @@ If you prefer the [Material UI](https://material-ui.com/) api but also like Boot
 ## Install
 
 ```bash
-# npm
 npm i material-ui-bootstrap
 ```
 
