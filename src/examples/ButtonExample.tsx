@@ -11,17 +11,17 @@ export default function ButtonExample() {
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
             <Grid item xs={4} md={2}>
-              <Button variant="contained" color={color}>
+              <Button fullWidth variant="contained" color={color}>
                 {color}
               </Button>
             </Grid>
             <Grid item xs={4} md={2}>
-              <Button variant="outlined" color={color}>
+              <Button fullWidth variant="outlined" color={color}>
                 {color}
               </Button>
             </Grid>
             <Grid item xs={4} md={2}>
-              <Button variant="text" color={color}>
+              <Button fullWidth variant="text" color={color}>
                 {color}
               </Button>
             </Grid>

@@ -61,8 +61,8 @@ const useStyles = makeStyles((theme: Theme) => {
       textTransform: "none",
       boxShadow: "none",
       borderRadius: ".25rem",
-      padding: ".375rem .75rem",
-      fontSize: "1rem",
+      padding: ".45rem .75rem",
+      fontSize: (x: ButtonProps) => (x.size === "large" ? "1.5rem" : "1rem"),
       lineHeight: "1.5",
       "&.Mui-disabled": {
         opacity: 0.3,
