@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid"
 import React from "react"
-import { bootstrapColors } from "../Alert"
+import bootstrapColors from "../bootstrapColors"
 import Typography from "../Typography"
 import TypographySnippet from "./TypographySnippet"
 

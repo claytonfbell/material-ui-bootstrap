@@ -1,6 +1,7 @@
 import Grid from "@material-ui/core/Grid"
 import React from "react"
-import Alert, { bootstrapColors } from "../Alert"
+import Alert from "../Alert"
+import bootstrapColors from "../bootstrapColors"
 import AlertSnippet from "./AlertSnippet"
 
 export default function AlertExample() {
@@ -20,6 +21,12 @@ export default function AlertExample() {
           </Grid>
         ))}
       </Grid>
+      <br />
+      <br />
+      <Alert color="danger" dismissible>
+        <Alert.Heading>Dismissable</Alert.Heading>
+        This is a dismissable one
+      </Alert>
 
       <AlertSnippet />
     </>

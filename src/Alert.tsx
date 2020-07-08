@@ -1,20 +1,13 @@
 /**
  * Emulates the bootstrap alert boxes
  */
+import Fade from "@material-ui/core/Fade"
 import { fade, lighten } from "@material-ui/core/styles/colorManipulator"
 import makeStyles from "@material-ui/core/styles/makeStyles"
+import CloseIcon from "@material-ui/icons/Close"
 import React from "react"
+import { BootstrapColor } from "./bootstrapColors"
 import Typography from "./Typography"
-
-export type BootstrapColor =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info"
-  | "light"
-  | "dark"
 
 const useStyles = makeStyles((theme) => {
   const bootstrapColors: {
@@ -84,31 +77,56 @@ const useStyles = makeStyles((theme) => {
         color: (x: AlertProps) => getColor(x).color,
       },
     },
+    closeIcon: {
+      right: 12,
+      position: "absolute",
+      cursor: "pointer",
+      "&:hover": {
+        color: "#333",
+      },
+    },
   }
 })
-
-export const bootstrapColors: BootstrapColor[] = [
-  "primary",
-  "secondary",
-  "success",
-  "danger",
-  "warning",
-  "info",
-  "light",
-  "dark",
-]
 
 export interface AlertProps {
   children: React.ReactNode
   color?: BootstrapColor
+  show?: boolean
+  onClose?: () => void
+  dismissible?: boolean
 }
 
 function Alert(props: AlertProps) {
   const classes = useStyles(props)
+  const [show, setShow] = React.useState<boolean>(true)
+
+  React.useEffect(() => {
+    if (props.show !== undefined) {
+      setShow(props.show)
+    }
+  }, [props.show])
+
+  function handleDismiss() {
+    setShow(false)
+    if (props.onClose !== undefined) {
+      props.onClose()
+    }
+  }
+
   return (
-    <div className={classes.root}>
-      <Typography color="inherit">{props.children}</Typography>
-    </div>
+    <Fade in={show} unmountOnExit>
+      <div className={classes.root}>
+        {props.dismissible && (
+          <CloseIcon
+            onClick={handleDismiss}
+            className={classes.closeIcon}
+            fontSize="inherit"
+            color="inherit"
+          />
+        )}
+        <Typography color="inherit">{props.children}</Typography>
+      </div>
+    </Fade>
   )
 }
 

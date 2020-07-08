@@ -4,7 +4,7 @@ import MUITypography, {
 } from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/styles/makeStyles"
 import React from "react"
-import { BootstrapColor } from "./Alert"
+import { BootstrapColor } from "./bootstrapColors"
 
 const useStyles = makeStyles((theme: Theme) => {
   const bootstrapColors: {
