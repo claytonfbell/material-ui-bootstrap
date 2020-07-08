@@ -62,7 +62,12 @@ const useStyles = makeStyles((theme: Theme) => {
       boxShadow: "none",
       borderRadius: ".25rem",
       padding: ".45rem .75rem",
-      fontSize: (x: ButtonProps) => (x.size === "large" ? "1.5rem" : "1rem"),
+      fontSize: (x: ButtonProps) =>
+        x.size === "large"
+          ? "1.22rem"
+          : x.size === "medium"
+          ? "1rem"
+          : "0.75rem",
       lineHeight: "1.5",
       "&.Mui-disabled": {
         opacity: 0.3,
@@ -122,4 +127,8 @@ const Button = React.forwardRef(function BootstrapButton(
 
   return <MUIButton {...otherProps} classes={classes} ref={ref} />
 })
+Button.defaultProps = {
+  size: "medium",
+  color: "dark",
+}
 export default Button
