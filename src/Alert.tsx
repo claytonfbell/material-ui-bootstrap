@@ -5,6 +5,7 @@ import Fade from "@material-ui/core/Fade"
 import { fade, lighten } from "@material-ui/core/styles/colorManipulator"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import CloseIcon from "@material-ui/icons/Close"
+import clsx from "clsx"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
 import Typography from "./Typography"
@@ -86,6 +87,36 @@ const useStyles = makeStyles((theme) => {
         color: "#333",
       },
     },
+    /* Styles applied to the root element if `maxWidth="xs"`. */
+    maxWidthXs: {
+      [theme.breakpoints.up("xs")]: {
+        maxWidth: Math.max(theme.breakpoints.values.xs, 444),
+      },
+    },
+    /* Styles applied to the root element if `maxWidth="sm"`. */
+    maxWidthSm: {
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: theme.breakpoints.values.sm,
+      },
+    },
+    /* Styles applied to the root element if `maxWidth="md"`. */
+    maxWidthMd: {
+      [theme.breakpoints.up("md")]: {
+        maxWidth: theme.breakpoints.values.md,
+      },
+    },
+    /* Styles applied to the root element if `maxWidth="lg"`. */
+    maxWidthLg: {
+      [theme.breakpoints.up("lg")]: {
+        maxWidth: theme.breakpoints.values.lg,
+      },
+    },
+    /* Styles applied to the root element if `maxWidth="xl"`. */
+    maxWidthXl: {
+      [theme.breakpoints.up("xl")]: {
+        maxWidth: theme.breakpoints.values.xl,
+      },
+    },
   }
 })
 
@@ -95,6 +126,7 @@ export interface AlertProps {
   show?: boolean
   onClose?: () => void
   dismissible?: boolean
+  maxWidth?: "xs" | "sm" | "md" | "lg" | "xl" | false
 }
 
 function Alert(props: AlertProps) {
@@ -114,9 +146,25 @@ function Alert(props: AlertProps) {
     }
   }
 
+  let maxWidthClass = classes.maxWidthMd
+  switch (props.maxWidth) {
+    case "lg":
+      maxWidthClass = classes.maxWidthLg
+      break
+    case "md":
+      maxWidthClass = classes.maxWidthMd
+      break
+    case "sm":
+      maxWidthClass = classes.maxWidthSm
+      break
+    case "xs":
+      maxWidthClass = classes.maxWidthXs
+      break
+  }
+
   return (
     <Fade in={show} unmountOnExit>
-      <div className={classes.root}>
+      <div className={clsx(classes.root, maxWidthClass)}>
         {props.dismissible && (
           <CloseIcon
             onClick={handleDismiss}

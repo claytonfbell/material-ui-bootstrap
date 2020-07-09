@@ -4,16 +4,28 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
 export default function AlertSnippet() {
   const codeString = `
   import React from "react"
-  import { Alert } from "material-ui-bootstrap"
+  import { Alert, Button } from "material-ui-bootstrap"
   
-  export default function App() {
+  export default function AlertExample() {
+    const [show, setShow] = React.useState(true)
     return (
-      <Alert color="danger" dismissible>
-        <Alert.Heading>Heading</Alert.Heading>
-        Alert danger
-      </Alert>
+      <>
+        <Alert
+          color="danger"
+          dismissible
+          show={show}
+          onClose={() => setShow(false)}
+        >
+          <Alert.Heading>Control State</Alert.Heading>
+          This is a dismissable one where you control the dismissed state
+          externally.
+        </Alert>
+        <Button onClick={() => setShow(true)}>Show</Button>
+        <Button onClick={() => setShow(false)}>Hide</Button>
+      </>
     )
   }
+  
 `
   return (
     <SyntaxHighlighter language="javascript" style={docco}>

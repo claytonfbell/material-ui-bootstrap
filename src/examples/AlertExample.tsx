@@ -6,7 +6,7 @@ import Button from "../Button"
 import AlertSnippet from "./AlertSnippet"
 
 export default function AlertExample() {
-  const [show, setShow] = React.useState(false)
+  const [show, setShow] = React.useState(true)
   return (
     <>
       <Grid container spacing={3}>
@@ -25,7 +25,7 @@ export default function AlertExample() {
       </Grid>
       <br />
       <br />
-      <Alert color="danger" dismissible>
+      <Alert color="danger" dismissible maxWidth="md">
         This is a dismissable one.
       </Alert>
 
@@ -38,8 +38,9 @@ export default function AlertExample() {
         show={show}
         onClose={() => setShow(false)}
       >
-        <Alert.Heading>Dismissable State</Alert.Heading>
-        This is a dismissable one
+        <Alert.Heading>Control State</Alert.Heading>
+        This is a dismissable one where you control the dismissed state
+        externally.
       </Alert>
       <Button onClick={() => setShow(true)}>Show</Button>
       <Button onClick={() => setShow(false)}>Hide</Button>
