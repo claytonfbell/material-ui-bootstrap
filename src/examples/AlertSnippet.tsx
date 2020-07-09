@@ -8,7 +8,7 @@ export default function AlertSnippet() {
   
   export default function App() {
     return (
-      <Alert color="danger">
+      <Alert color="danger" dismissible>
         <Alert.Heading>Heading</Alert.Heading>
         Alert danger
       </Alert>

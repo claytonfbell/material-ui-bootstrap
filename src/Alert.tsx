@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => {
       },
     },
     closeIcon: {
+      fontSize: "1.25rem",
       right: 12,
       position: "absolute",
       cursor: "pointer",
@@ -120,7 +121,6 @@ function Alert(props: AlertProps) {
           <CloseIcon
             onClick={handleDismiss}
             className={classes.closeIcon}
-            fontSize="inherit"
             color="inherit"
           />
         )}

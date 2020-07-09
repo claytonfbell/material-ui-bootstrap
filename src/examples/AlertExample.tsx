@@ -2,9 +2,11 @@ import Grid from "@material-ui/core/Grid"
 import React from "react"
 import Alert from "../Alert"
 import bootstrapColors from "../bootstrapColors"
+import Button from "../Button"
 import AlertSnippet from "./AlertSnippet"
 
 export default function AlertExample() {
+  const [show, setShow] = React.useState(false)
   return (
     <>
       <Grid container spacing={3}>
@@ -24,9 +26,23 @@ export default function AlertExample() {
       <br />
       <br />
       <Alert color="danger" dismissible>
-        <Alert.Heading>Dismissable</Alert.Heading>
+        This is a dismissable one.
+      </Alert>
+
+      <br />
+      <br />
+
+      <Alert
+        color="danger"
+        dismissible
+        show={show}
+        onClose={() => setShow(false)}
+      >
+        <Alert.Heading>Dismissable State</Alert.Heading>
         This is a dismissable one
       </Alert>
+      <Button onClick={() => setShow(true)}>Show</Button>
+      <Button onClick={() => setShow(false)}>Hide</Button>
 
       <AlertSnippet />
     </>
