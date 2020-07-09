@@ -1,4 +1,5 @@
 import Grid from "@material-ui/core/Grid"
+import InfoIcon from "@material-ui/icons/Info"
 import React from "react"
 import Alert from "../Alert"
 import bootstrapColors from "../bootstrapColors"
@@ -23,6 +24,17 @@ export default function AlertExample() {
           </Grid>
         ))}
       </Grid>
+
+      <br />
+      <br />
+      {/* Info Box */}
+      <Alert color="info">
+        <Alert.Heading icon={<InfoIcon />}>Heading With Icon</Alert.Heading>
+        <p>You can drop in an icon to make helpful info boxes.</p>
+        <p>
+          <code>{`<Alert.Heading icon={<InfoIcon />}>`}</code>
+        </p>
+      </Alert>
       <br />
       <br />
       <Alert color="danger" dismissible maxWidth="md">

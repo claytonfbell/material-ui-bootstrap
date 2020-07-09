@@ -77,7 +77,11 @@ const useStyles = makeStyles((theme) => {
       "& a": {
         color: (x: AlertProps) => getColor(x).color,
       },
+      "& p": {
+        margin: 0,
+      },
     },
+
     closeIcon: {
       fontSize: "1.25rem",
       right: 12,
@@ -178,12 +182,25 @@ function Alert(props: AlertProps) {
   )
 }
 
+const useStylesForHeading = makeStyles({
+  icon: {
+    marginRight: 10,
+    verticalAlign: -6,
+    "& > *:first-child": {
+      fontSize: 32,
+    },
+  },
+})
+
 export interface AlertHeadingProps {
   children: React.ReactNode
+  icon?: React.ReactNode
 }
 function Heading(props: AlertHeadingProps) {
+  const classes = useStylesForHeading()
   return (
     <Typography color="inherit" variant="h5" component="h2">
+      {props.icon && <span className={classes.icon}>{props.icon}</span>}
       {props.children}
     </Typography>
   )
