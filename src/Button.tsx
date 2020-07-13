@@ -116,6 +116,7 @@ export type ButtonProps = Omit<MUIButtonProps, "color"> & {
   color?: BootstrapColor
   component?: any
   to?: string
+  target?: string
 }
 
 const Button = React.forwardRef(function BootstrapButton(
