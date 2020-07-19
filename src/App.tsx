@@ -10,6 +10,7 @@ import {
 import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
 import React from "react"
 import Alert from "./Alert"
+import "./App.css"
 import Button from "./Button"
 import AlertExample from "./examples/AlertExample"
 import ButtonExample from "./examples/ButtonExample"
@@ -27,6 +28,9 @@ function App() {
       secondary: {
         main: "#69757d",
       },
+    },
+    typography: {
+      htmlFontSize: 10,
     },
   })
 

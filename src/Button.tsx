@@ -56,6 +56,11 @@ const useStyles = makeStyles((theme: Theme) => {
     return bootstrapColors[x.color === undefined ? "dark" : x.color]
   }
 
+  // @ts-ignore
+  const htmlFontSize = theme.typography.htmlFontSize
+  const coef = theme.typography.fontSize / 14
+  const pxToRem = (size: number) => `${(size / htmlFontSize) * coef}rem`
+
   return {
     root: {
       textTransform: "none",
@@ -63,11 +68,7 @@ const useStyles = makeStyles((theme: Theme) => {
       borderRadius: ".25rem",
       padding: ".45rem .75rem",
       fontSize: (x: ButtonProps) =>
-        x.size === "large"
-          ? "1.22rem"
-          : x.size === "medium"
-          ? "1rem"
-          : "0.75rem",
+        pxToRem(x.size === "large" ? 19 : x.size === "medium" ? 15 : 13),
       lineHeight: "1.5",
       "&.Mui-disabled": {
         opacity: 0.3,
