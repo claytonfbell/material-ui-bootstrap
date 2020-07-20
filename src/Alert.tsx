@@ -11,6 +11,11 @@ import { BootstrapColor } from "./bootstrapColors"
 import Typography from "./Typography"
 
 const useStyles = makeStyles((theme) => {
+  // @ts-ignore
+  const htmlFontSize = theme.typography.htmlFontSize
+  const coef = theme.typography.fontSize / 14
+  const pxToRem = (size: number) => `${(size / htmlFontSize) * coef}rem`
+
   const bootstrapColors: {
     [key in BootstrapColor]: {
       color: string
@@ -71,8 +76,8 @@ const useStyles = makeStyles((theme) => {
       borderColor: (x: AlertProps) => getColor(x).borderColor,
       position: "relative",
       border: "1px solid",
-      padding: ".75rem 1.25rem",
-      borderRadius: ".25rem",
+      padding: `${pxToRem(12)} ${pxToRem(14)}`,
+      borderRadius: pxToRem(4),
       width: "100%",
       "& a": {
         color: (x: AlertProps) => getColor(x).color,
@@ -83,7 +88,7 @@ const useStyles = makeStyles((theme) => {
     },
 
     closeIcon: {
-      fontSize: "1.25rem",
+      fontSize: pxToRem(18),
       right: 12,
       position: "absolute",
       cursor: "pointer",

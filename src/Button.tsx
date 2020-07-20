@@ -65,8 +65,11 @@ const useStyles = makeStyles((theme: Theme) => {
     root: {
       textTransform: "none",
       boxShadow: "none",
-      borderRadius: ".25rem",
-      padding: ".45rem .75rem",
+      borderRadius: pxToRem(4),
+      padding: (x: ButtonProps) =>
+        `${pxToRem(x.size === "large" ? 19 : x.size === "medium" ? 15 : 13)} ${
+          x.size === "large" ? 19 : x.size === "medium" ? 15 : 13
+        }`,
       fontSize: (x: ButtonProps) =>
         pxToRem(x.size === "large" ? 19 : x.size === "medium" ? 15 : 13),
       lineHeight: "1.5",
