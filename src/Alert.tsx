@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => {
       border: "1px solid",
       padding: `${pxToRem(12)} ${pxToRem(14)}`,
       borderRadius: pxToRem(4),
-      width: "100%",
+      //   width: "100%",
       "& a": {
         color: (x: AlertProps) => getColor(x).color,
       },
