@@ -38,7 +38,8 @@ export default function AlertExample() {
       <br />
       <br />
       <Alert color="danger" dismissible maxWidth="md">
-        This is a dismissable one.
+        This is a dismissable one. This is a dismissable one. This is a
+        dismissable one.
       </Alert>
 
       <br />
