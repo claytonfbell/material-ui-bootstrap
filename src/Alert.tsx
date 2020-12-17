@@ -157,6 +157,9 @@ function Alert(props: AlertProps) {
 
   let maxWidthClass = classes.maxWidthMd
   switch (props.maxWidth) {
+    case "xl":
+      maxWidthClass = classes.maxWidthXl
+      break
     case "lg":
       maxWidthClass = classes.maxWidthLg
       break
