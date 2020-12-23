@@ -1,13 +1,12 @@
 import MUIButton, {
   ButtonProps as MUIButtonProps,
 } from "@material-ui/core/Button"
-import { Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme } from "@material-ui/core/styles"
 import {
   darken,
   fade,
   lighten,
 } from "@material-ui/core/styles/colorManipulator"
-import makeStyles from "@material-ui/styles/makeStyles"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
 

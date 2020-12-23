@@ -1,8 +1,7 @@
-import { Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme } from "@material-ui/core/styles"
 import MUITypography, {
   TypographyProps as MUITypographyProps,
 } from "@material-ui/core/Typography"
-import makeStyles from "@material-ui/styles/makeStyles"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
 

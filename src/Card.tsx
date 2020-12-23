@@ -1,7 +1,6 @@
 import MUICard, { CardProps as MUICardProps } from "@material-ui/core/Card"
-import { Theme } from "@material-ui/core/styles"
+import { makeStyles, Theme } from "@material-ui/core/styles"
 import { fade } from "@material-ui/core/styles/colorManipulator"
-import makeStyles from "@material-ui/styles/makeStyles"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
 import Typography from "./Typography"
