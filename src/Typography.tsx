@@ -65,7 +65,7 @@ export type TypographyProps = Omit<MUITypographyProps, "color"> & {
   component?: any
 }
 
-const Typography = React.forwardRef(function BootstrapButton(
+export const Typography = React.forwardRef(function BootstrapButton(
   props: TypographyProps,
   ref: any
 ) {
@@ -74,4 +74,3 @@ const Typography = React.forwardRef(function BootstrapButton(
 
   return <MUITypography {...otherProps} classes={classes} ref={ref} />
 })
-export default Typography

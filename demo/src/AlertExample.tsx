@@ -1,13 +1,11 @@
-import Grid from "@material-ui/core/Grid"
-import InfoIcon from "@material-ui/icons/Info"
-import React from "react"
-import Alert from "../Alert"
-import bootstrapColors from "../bootstrapColors"
-import Button from "../Button"
-import AlertSnippet from "./AlertSnippet"
+import Grid from '@material-ui/core/Grid';
+import InfoIcon from '@material-ui/icons/Info';
+import React from 'react';
+import { Alert, bootstrapColors, Button } from '../../dist';
+// import AlertSnippet from './AlertSnippet';
 
 export default function AlertExample() {
-  const [show, setShow] = React.useState(true)
+  const [show, setShow] = React.useState(true);
   return (
     <>
       <Grid container spacing={3}>
@@ -15,7 +13,7 @@ export default function AlertExample() {
           <Grid item key={idx} xs={12} sm={6} md={4}>
             <Alert color={color}>
               <Alert.Heading>Heading</Alert.Heading>
-              Alert {color} with a{" "}
+              Alert {color} with a{' '}
               <a href="https://google.com" target="google">
                 link
               </a>
@@ -58,7 +56,7 @@ export default function AlertExample() {
       <Button onClick={() => setShow(true)}>Show</Button>
       <Button onClick={() => setShow(false)}>Hide</Button>
 
-      <AlertSnippet />
+      {/* <AlertSnippet /> */}
     </>
-  )
+  );
 }

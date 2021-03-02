@@ -122,7 +122,7 @@ export type ButtonProps = Omit<MUIButtonProps, "color"> & {
   target?: string
 }
 
-const Button = React.forwardRef(function BootstrapButton(
+export const Button = React.forwardRef(function BootstrapButton(
   props: ButtonProps,
   ref: any
 ) {
@@ -135,4 +135,3 @@ Button.defaultProps = {
   size: "medium",
   color: "dark",
 }
-export default Button

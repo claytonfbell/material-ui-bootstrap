@@ -1,38 +1,37 @@
-import Container from "@material-ui/core/Container"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import Grid from "@material-ui/core/Grid"
-import { ThemeProvider } from "@material-ui/core/styles"
-import GitHubIcon from "@material-ui/icons/GitHub"
-import {
-  DarkModeProvider,
-  useDarkMode,
-} from "material-ui-pack/dist/DarkModeProvider"
-import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
-import React from "react"
-import Alert from "./Alert"
-import "./App.css"
-import Button from "./Button"
-import AlertExample from "./examples/AlertExample"
-import ButtonExample from "./examples/ButtonExample"
-import CardExample from "./examples/CardExample"
-import TypographyExample from "./examples/TypographyExample"
-import Typography from "./Typography"
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import GitHubIcon from '@material-ui/icons/GitHub';
+// import {
+//   DarkModeProvider,
+//   useDarkMode,
+// } from "material-ui-pack/dist/DarkModeProvider"
+// import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
+import React from 'react';
+import { Alert, Button, Typography } from '../../dist';
+import AlertExample from '../src/AlertExample';
+// import '../src/App.css';
+import ButtonExample from '../src/ButtonExample';
+import CardExample from '../src/CardExample';
+import TypographyExample from '../src/TypographyExample';
 
-function App() {
-  const { createMuiThemeWithDarkMode } = useDarkMode()
-  const theme = createMuiThemeWithDarkMode({
+export default function App() {
+  //   const { createMuiThemeWithDarkMode } = useDarkMode()
+  //   const theme = createMuiThemeWithDarkMode({
+  const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#0080ff",
+        main: '#0080ff',
       },
       secondary: {
-        main: "#69757d",
+        main: '#69757d',
       },
     },
     typography: {
       htmlFontSize: 10,
     },
-  })
+  });
 
   return (
     <ThemeProvider theme={theme}>
@@ -65,7 +64,7 @@ function App() {
             </Alert>
             <br />
             <br />
-            <DarkModeToggle />
+            {/* <DarkModeToggle /> */}
           </Grid>
           <Grid>
             <Button
@@ -107,11 +106,11 @@ function App() {
         </Alert>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
 
-export default () => (
-  <DarkModeProvider>
-    <App />
-  </DarkModeProvider>
-)
+// export default () => (
+//   <DarkModeProvider>
+//     <App />
+//   </DarkModeProvider>
+// )

@@ -3,7 +3,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 import { fade } from "@material-ui/core/styles/colorManipulator"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
-import Typography from "./Typography"
+import { Typography } from "./Typography"
 export { default as CardActionArea } from "@material-ui/core/CardActionArea"
 export { default as CardActions } from "@material-ui/core/CardActions"
 export { default as CardContent } from "@material-ui/core/CardContent"
@@ -77,7 +77,7 @@ export type CardProps = Omit<MUICardProps, "color"> & {
   //   component?: any
 }
 
-const Card = React.forwardRef(function BootstrapButton(
+export const Card = React.forwardRef(function BootstrapButton(
   props: CardProps,
   ref: any
 ) {
@@ -88,7 +88,6 @@ const Card = React.forwardRef(function BootstrapButton(
     <MUICard {...otherProps} classes={classes} ref={ref} variant="outlined" />
   )
 })
-export default Card
 
 export interface CardHeaderProps {
   children: React.ReactNode

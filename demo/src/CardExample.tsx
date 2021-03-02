@@ -1,8 +1,13 @@
-import Grid from "@material-ui/core/Grid"
-import React from "react"
-import bootstrapColors from "../bootstrapColors"
-import Card, { CardContent, CardHeader, CardTitle } from "../Card"
-import CardSnippet from "./CardSnippet"
+import Grid from '@material-ui/core/Grid';
+import React from 'react';
+import {
+  bootstrapColors,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '../../dist';
+// import CardSnippet from './CardSnippet';
 
 export default function CardExample() {
   return (
@@ -23,8 +28,8 @@ export default function CardExample() {
         ))}
       </Grid>
       <br />
-      <CardSnippet />
+      {/* <CardSnippet /> */}
       <br />
     </>
-  )
+  );
 }

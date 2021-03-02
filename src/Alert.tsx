@@ -8,9 +8,9 @@ import CloseIcon from "@material-ui/icons/Close"
 import clsx from "clsx"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
-import Typography from "./Typography"
+import { Typography } from "./Typography"
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(theme => {
   // @ts-ignore
   const htmlFontSize = theme.typography.htmlFontSize
   const coef = theme.typography.fontSize / 14
@@ -138,7 +138,7 @@ export interface AlertProps {
   maxWidth?: "xs" | "sm" | "md" | "lg" | "xl" | false
 }
 
-function Alert(props: AlertProps) {
+export function Alert(props: AlertProps) {
   const classes = useStyles(props)
   const [show, setShow] = React.useState<boolean>(true)
 
@@ -215,4 +215,3 @@ function Heading(props: AlertHeadingProps) {
 }
 
 Alert.Heading = Heading
-export default Alert
