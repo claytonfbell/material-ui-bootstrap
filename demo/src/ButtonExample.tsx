@@ -2,7 +2,7 @@ import MUIButton from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
 import { bootstrapColors, Button } from "material-ui-bootstrap"
 import React from "react"
-// import ButtonSnippet from './ButtonSnippet';
+import ButtonSnippet from "./ButtonSnippet"
 
 export default function ButtonExample() {
   return (
@@ -89,7 +89,7 @@ export default function ButtonExample() {
         </Grid>
       </Grid>
       <br />
-      {/* <ButtonSnippet /> */}
+      <ButtonSnippet />
       <br />
     </>
   )

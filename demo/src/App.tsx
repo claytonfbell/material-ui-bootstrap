@@ -1,25 +1,20 @@
 import Container from "@material-ui/core/Container"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
+import { ThemeProvider } from "@material-ui/core/styles"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import { Alert, Button, Typography } from "material-ui-bootstrap"
-// import {
-//   DarkModeProvider,
-//   useDarkMode,
-// } from "material-ui-pack/dist/DarkModeProvider"
-// import DarkModeToggle from "material-ui-pack/dist/DarkModeToggle"
+import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import React from "react"
 import AlertExample from "../src/AlertExample"
-// import '../src/App.css';
+import "../src/App.css"
 import ButtonExample from "../src/ButtonExample"
 import CardExample from "../src/CardExample"
 import TypographyExample from "../src/TypographyExample"
 
-export default function App() {
-  //   const { createMuiThemeWithDarkMode } = useDarkMode()
-  //   const theme = createMuiThemeWithDarkMode({
-  const theme = createMuiTheme({
+function AppContent() {
+  const { createMuiThemeWithDarkMode } = useDarkMode()
+  const theme = createMuiThemeWithDarkMode({
     palette: {
       primary: {
         main: "#0080ff",
@@ -64,7 +59,7 @@ export default function App() {
             </Alert>
             <br />
             <br />
-            {/* <DarkModeToggle /> */}
+            <DarkModeToggle />
           </Grid>
           <Grid>
             <Button
@@ -109,8 +104,10 @@ export default function App() {
   )
 }
 
-// export default () => (
-//   <DarkModeProvider>
-//     <App />
-//   </DarkModeProvider>
-// )
+export default function App() {
+  return (
+    <DarkModeProvider>
+      <AppContent />
+    </DarkModeProvider>
+  )
+}

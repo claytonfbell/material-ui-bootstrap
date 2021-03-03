@@ -1,7 +1,7 @@
 import Grid from "@material-ui/core/Grid"
 import { bootstrapColors, Typography } from "material-ui-bootstrap"
 import React from "react"
-// import TypographySnippet from './TypographySnippet';
+import TypographySnippet from "./TypographySnippet"
 
 export default function TypographyExample() {
   return (
@@ -16,7 +16,7 @@ export default function TypographyExample() {
         ))}
       </Grid>
       <br />
-      {/* <TypographySnippet /> */}
+      <TypographySnippet />
       <br />
     </>
   )

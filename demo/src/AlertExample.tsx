@@ -2,7 +2,7 @@ import Grid from "@material-ui/core/Grid"
 import InfoIcon from "@material-ui/icons/Info"
 import { Alert, bootstrapColors, Button } from "material-ui-bootstrap"
 import React from "react"
-// import AlertSnippet from './AlertSnippet';
+import AlertSnippet from "./AlertSnippet"
 
 export default function AlertExample() {
   const [show, setShow] = React.useState(true)
@@ -56,7 +56,7 @@ export default function AlertExample() {
       <Button onClick={() => setShow(true)}>Show</Button>
       <Button onClick={() => setShow(false)}>Hide</Button>
 
-      {/* <AlertSnippet /> */}
+      <AlertSnippet />
     </>
   )
 }
