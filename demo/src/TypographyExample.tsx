@@ -1,6 +1,6 @@
-import Grid from '@material-ui/core/Grid';
-import React from 'react';
-import { bootstrapColors, Typography } from '../../dist';
+import Grid from "@material-ui/core/Grid"
+import { bootstrapColors, Typography } from "material-ui-bootstrap"
+import React from "react"
 // import TypographySnippet from './TypographySnippet';
 
 export default function TypographyExample() {
@@ -19,5 +19,5 @@ export default function TypographyExample() {
       {/* <TypographySnippet /> */}
       <br />
     </>
-  );
+  )
 }

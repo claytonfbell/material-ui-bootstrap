@@ -1,12 +1,12 @@
-import Grid from '@material-ui/core/Grid';
-import React from 'react';
+import Grid from "@material-ui/core/Grid"
 import {
   bootstrapColors,
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from '../../dist';
+} from "material-ui-bootstrap"
+import React from "react"
 // import CardSnippet from './CardSnippet';
 
 export default function CardExample() {
@@ -31,5 +31,5 @@ export default function CardExample() {
       {/* <CardSnippet /> */}
       <br />
     </>
-  );
+  )
 }

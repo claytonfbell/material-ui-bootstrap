@@ -1,7 +1,7 @@
-import MUIButton from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import React from 'react';
-import { bootstrapColors, Button } from '../../dist';
+import MUIButton from "@material-ui/core/Button"
+import Grid from "@material-ui/core/Grid"
+import { bootstrapColors, Button } from "material-ui-bootstrap"
+import React from "react"
 // import ButtonSnippet from './ButtonSnippet';
 
 export default function ButtonExample() {
@@ -92,5 +92,5 @@ export default function ButtonExample() {
       {/* <ButtonSnippet /> */}
       <br />
     </>
-  );
+  )
 }
