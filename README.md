@@ -7,15 +7,15 @@ If you prefer the [Material UI](https://material-ui.com/) api but also like Boot
 
 [DEMO HERE](https://material-ui-bootstrap.xyz)
 
-<!-- toc -->
+[CHANGELOG.md](./CHANGELOG.md)
 
 - [Install](#install)
 - [Button](#button)
 - [Alert](#alert)
 - [Typography](#typography)
 - [Card](#card)
-
-<!-- tocstop -->
+- [Label](#label)
+- [Panel](#panel)
 
 ## Install
 
@@ -72,7 +72,7 @@ export default function TypographyExample() {
 
 ```tsx
 import React from "react"
-import Card, { CardContent, CardHeader, CardTitle } from "material-ui-bootstrap"
+import { Card, CardContent, CardHeader, CardTitle } from "material-ui-bootstrap"
 
 export default function CardExample() {
   return (
@@ -83,6 +83,33 @@ export default function CardExample() {
         Example card content.
       </CardContent>
     </Card>
+  )
+}
+```
+
+## Label
+
+```tsx
+import React from "react"
+import { Label } from "material-ui-bootstrap"
+
+export default function LabelExample() {
+  return <Label color="info">Example</Label>
+}
+```
+
+## Panel
+
+```tsx
+import React from "react"
+import { Panel, PanelBody, PanelHeader } from "material-ui-bootstrap"
+
+export default function PanelExample() {
+  return (
+    <Panel color="info">
+      <PanelHeader>Header</PanelHeader>
+      <PanelBody>Body</PanelBody>
+    </Panel>
   )
 }
 ```
