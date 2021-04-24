@@ -17,6 +17,7 @@ import {
   CardTitleProps,
 } from "./Card"
 import { Label } from "./Label"
+import { Panel, PanelBody, PanelHeader } from "./Panel"
 import { Typography } from "./Typography"
 
 export {
@@ -37,4 +38,7 @@ export {
   CardProps,
   CardTitleProps,
   Label,
+  Panel,
+  PanelHeader,
+  PanelBody,
 }

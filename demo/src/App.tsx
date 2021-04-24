@@ -3,7 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
 import { ThemeProvider } from "@material-ui/core/styles"
 import GitHubIcon from "@material-ui/icons/GitHub"
-import { Alert, Button, Typography } from "material-ui-bootstrap"
+import { Button, Panel, PanelBody, Typography } from "material-ui-bootstrap"
 import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import React from "react"
 import AlertExample from "../src/AlertExample"
@@ -11,14 +11,16 @@ import "../src/App.css"
 import ButtonExample from "../src/ButtonExample"
 import CardExample from "../src/CardExample"
 import TypographyExample from "../src/TypographyExample"
+import { ExampleBox } from "./ExampleBox"
 import BadgeExample from "./LabelExample"
+import PanelExample from "./PanelExample"
 
 function AppContent() {
   const { createMuiThemeWithDarkMode } = useDarkMode()
   const theme = createMuiThemeWithDarkMode({
     palette: {
       primary: {
-        main: "#0080ff",
+        main: "#337ab7",
       },
       secondary: {
         main: "#69757d",
@@ -41,24 +43,26 @@ function AppContent() {
               material-ui-bootstrap
             </Typography>
             <br />
-            <Alert color="light">
-              <a href="https://badge.fury.io/js/material-ui-bootstrap">
-                <img
-                  src="https://badge.fury.io/js/material-ui-bootstrap.svg"
-                  alt="npm version"
-                />
-              </a>
-              &nbsp;
-              <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
-                <img
-                  src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
-                  alt="Build Status"
-                />
-              </a>
-              <div>
-                <code>npm install material-ui-bootstrap</code>
-              </div>
-            </Alert>
+            <Panel color="light">
+              <PanelBody>
+                <a href="https://badge.fury.io/js/material-ui-bootstrap">
+                  <img
+                    src="https://badge.fury.io/js/material-ui-bootstrap.svg"
+                    alt="npm version"
+                  />
+                </a>
+                &nbsp;
+                <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
+                  <img
+                    src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
+                    alt="Build Status"
+                  />
+                </a>
+                <div>
+                  <code>npm install material-ui-bootstrap</code>
+                </div>
+              </PanelBody>
+            </Panel>
             <br />
             <br />
             <DarkModeToggle />
@@ -75,39 +79,28 @@ function AppContent() {
           </Grid>
         </Grid>
         <br />
-        <Alert color="light">
-          <Alert.Heading>Button</Alert.Heading>
-          <br />
+
+        <ExampleBox title="Button">
           <ButtonExample />
-        </Alert>
-        <br />
-        <br />
-        <Alert color="light">
-          <Alert.Heading>Alert</Alert.Heading>
-          <br />
+        </ExampleBox>
+
+        <ExampleBox title="Alert">
           <AlertExample />
-        </Alert>
-        <br />
-        <br />
-        <Alert color="light">
-          <Alert.Heading>Typography</Alert.Heading>
-          <br />
+        </ExampleBox>
+
+        <ExampleBox title="Typography">
           <TypographyExample />
-        </Alert>
-        <br />
-        <br />
-        <Alert color="light">
-          <Alert.Heading>Card</Alert.Heading>
-          <br />
+        </ExampleBox>
+
+        <ExampleBox title="Card">
           <CardExample />
-        </Alert>
-        <br />
-        <br />
-        <Alert color="light">
-          <Alert.Heading>Label</Alert.Heading>
-          <br />
+        </ExampleBox>
+        <ExampleBox title="Label">
           <BadgeExample />
-        </Alert>
+        </ExampleBox>
+        <ExampleBox title="Panel">
+          <PanelExample />
+        </ExampleBox>
       </Container>
     </ThemeProvider>
   )
