@@ -1,5 +1,8 @@
 import { Alert } from "./Alert"
-import bootstrapColors, { BootstrapColor } from "./bootstrapColors"
+import bootstrapColors, {
+  BootstrapColor,
+  bootstrapPalette,
+} from "./bootstrapColors"
 import { Button } from "./Button"
 import {
   Card,
@@ -13,6 +16,7 @@ import {
   CardTitle,
   CardTitleProps,
 } from "./Card"
+import { Label } from "./Label"
 import { Typography } from "./Typography"
 
 export {
@@ -21,6 +25,7 @@ export {
   Button,
   Card,
   bootstrapColors,
+  bootstrapPalette,
   BootstrapColor,
   CardContent,
   CardHeader,
@@ -31,4 +36,5 @@ export {
   CardMedia,
   CardProps,
   CardTitleProps,
+  Label,
 }

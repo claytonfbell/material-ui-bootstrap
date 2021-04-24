@@ -11,6 +11,7 @@ import "../src/App.css"
 import ButtonExample from "../src/ButtonExample"
 import CardExample from "../src/CardExample"
 import TypographyExample from "../src/TypographyExample"
+import BadgeExample from "./LabelExample"
 
 function AppContent() {
   const { createMuiThemeWithDarkMode } = useDarkMode()
@@ -32,6 +33,7 @@ function AppContent() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
         <CssBaseline />
+
         <br />
         <Grid container justify="space-between">
           <Grid>
@@ -98,6 +100,13 @@ function AppContent() {
           <Alert.Heading>Card</Alert.Heading>
           <br />
           <CardExample />
+        </Alert>
+        <br />
+        <br />
+        <Alert color="light">
+          <Alert.Heading>Label</Alert.Heading>
+          <br />
+          <BadgeExample />
         </Alert>
       </Container>
     </ThemeProvider>
