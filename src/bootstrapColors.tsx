@@ -33,19 +33,19 @@ export const bootstrapPalette = (theme: Theme) => ({
   },
   success: {
     contrastText: "#fff",
-    main: "#218838",
+    main: "#5cb85c",
   },
   danger: {
     contrastText: "#fff",
-    main: "#c82333",
+    main: "#d9534f",
   },
   warning: {
     contrastText: "#333",
-    main: "#e0a800",
+    main: "#f0ad4e",
   },
   info: {
     contrastText: "#fff",
-    main: "#138496",
+    main: "#5bc0de",
   },
   light: {
     contrastText: theme.palette.text.secondary,
