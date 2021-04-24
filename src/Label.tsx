@@ -13,8 +13,8 @@ const useStyles = makeStyles(theme => {
   return {
     root: {
       display: "inline-block",
-      padding: ".25em .4em",
-      borderRadius: ".25rem",
+      padding: ".2em .4em",
+      borderRadius: ".35rem",
       color: (x: LabelProps) => palette[x.color].contrastText,
       backgroundColor: (x: LabelProps) => palette[x.color].main,
     },
@@ -23,5 +23,5 @@ const useStyles = makeStyles(theme => {
 
 export function Label(props: LabelProps) {
   const classes = useStyles(props)
-  return <div className={clsx(classes.root)}>{props.children}</div>
+  return <span className={clsx(classes.root)}>{props.children}</span>
 }
