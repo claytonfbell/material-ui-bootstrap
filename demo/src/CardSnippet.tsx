@@ -4,7 +4,7 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
 export default function CardSnippet() {
   const codeString = `
   import React from "react"
-  import Card, { CardContent, CardHeader, CardTitle } from "material-ui-bootstrap"
+  import { Card, CardContent, CardHeader, CardTitle } from "material-ui-bootstrap"
   
   export default function CardExample() {
     return (

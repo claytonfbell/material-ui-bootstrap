@@ -96,16 +96,12 @@ function AppContent() {
           <LabelExample />
         </ExampleBox>
 
-        <ExampleBox title="Tooltip" snippet={<TooltipSnippet />}>
-          <TooltipExample />
+        <ExampleBox title="Typography" snippet={<TypographySnippet />}>
+          <TypographyExample />
         </ExampleBox>
 
         <ExampleBox title="Alert" snippet={<AlertSnippet />}>
           <AlertExample />
-        </ExampleBox>
-
-        <ExampleBox title="Typography" snippet={<TypographySnippet />}>
-          <TypographyExample />
         </ExampleBox>
 
         <ExampleBox title="Card" snippet={<CardSnippet />}>
@@ -114,6 +110,10 @@ function AppContent() {
 
         <ExampleBox title="Panel" snippet={<PanelSnippet />}>
           <PanelExample />
+        </ExampleBox>
+
+        <ExampleBox title="Tooltip" snippet={<TooltipSnippet />}>
+          <TooltipExample />
         </ExampleBox>
       </Container>
     </ThemeProvider>

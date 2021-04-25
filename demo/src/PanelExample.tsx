@@ -15,8 +15,8 @@ export default function PanelExample() {
           <React.Fragment key={idx}>
             <Grid item xs={6} sm={3}>
               <Panel color={color}>
-                <PanelHeader>Header</PanelHeader>
-                <PanelBody>Body</PanelBody>
+                <PanelHeader>{color}</PanelHeader>
+                <PanelBody>{color}</PanelBody>
               </Panel>
             </Grid>
           </React.Fragment>

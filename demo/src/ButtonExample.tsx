@@ -11,6 +11,10 @@ export default function ButtonExample() {
             <Button variant="contained" color={color}>
               {color}
             </Button>
+            <div style={{ marginBottom: 12 }} />
+            <Button variant="outlined" color={color}>
+              {color}
+            </Button>
           </Grid>
         </React.Fragment>
       ))}

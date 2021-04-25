@@ -6,7 +6,7 @@ import React from "react"
 export default function LabelExample() {
   return (
     <>
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
             <Grid item>

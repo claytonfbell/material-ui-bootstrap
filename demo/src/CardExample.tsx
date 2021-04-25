@@ -16,9 +16,9 @@ export default function CardExample() {
           <React.Fragment key={idx}>
             <Grid item xs={6} sm={3}>
               <Card color={color}>
-                <CardHeader>CardHeader</CardHeader>
+                <CardHeader>{color}</CardHeader>
                 <CardContent>
-                  <CardTitle>Title</CardTitle>
+                  <CardTitle>{color}</CardTitle>
                   {color}
                 </CardContent>
               </Card>
