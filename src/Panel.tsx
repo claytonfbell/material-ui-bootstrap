@@ -14,6 +14,7 @@ const useStyles = (color: BootstrapColor) =>
 
     return {
       root: {
+        overflow: "hidden",
         borderRadius: 4,
         border: `1px solid ${borderColor}`,
         backgroundColor: theme.palette.background.paper,
