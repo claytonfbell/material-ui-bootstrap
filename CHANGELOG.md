@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.0...v2.2.1) (2021-04-25)
+
+
+### Bug Fixes
+
+* Color palette adjustments ([cde671a](https://github.com/claytonfbell/material-ui-bootstrap/commit/cde671a9681f47f0a90a4c3aaec4eeb8cc88277e))
+
 ## [2.2.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.1.0...v2.2.0) (2021-04-24)
 
 
