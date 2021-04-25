@@ -24,15 +24,21 @@ export function bootstrapAlertStyles(color: BootstrapColor, theme: Theme) {
       ? theme.palette.text.primary
       : palette[color].main
   const borderColor =
-    color === "light" ? theme.palette.divider : fade(lighten(clr, 0.6), 0.8)
+    color === "light" || color === "dark"
+      ? theme.palette.divider
+      : fade(lighten(clr, 0.6), 0.8)
   const backgroundColor =
     color === "light"
-      ? fade(theme.palette.text.secondary, 0.015)
+      ? fade(theme.palette.text.secondary, 0.035)
       : color === "dark"
-      ? theme.palette.text.primary
-      : fade(lighten(clr, 0.8), 0.8)
+      ? fade(theme.palette.text.primary, 0.95)
+      : fade(lighten(clr, 0.8), 0.95)
   const headerColor =
-    color === "dark" ? theme.palette.background.paper : darken(clr, 0.6)
+    color === "light"
+      ? fade(theme.palette.text.primary, 0.9)
+      : color === "dark"
+      ? fade(theme.palette.background.paper, 0.9)
+      : darken(clr, 0.6)
 
   return { borderColor, backgroundColor, headerColor }
 }
