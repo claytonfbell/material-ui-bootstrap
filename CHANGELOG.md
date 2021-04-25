@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.2...v2.3.0) (2021-04-25)
+
+
+### Features
+
+* Added Tooltip component ([e464254](https://github.com/claytonfbell/material-ui-bootstrap/commit/e464254f9f1eae327041a9dc4ebbaa5735ff7bcd))
+
 ### [2.2.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.1...v2.2.2) (2021-04-25)
 
 
