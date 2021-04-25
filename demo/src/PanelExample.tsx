@@ -13,7 +13,7 @@ export default function PanelExample() {
       <Grid container spacing={3}>
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
-            <Grid item xs={6} sm={3}>
+            <Grid item xs={6} md={3}>
               <Panel color={color}>
                 <PanelHeader>{color}</PanelHeader>
                 <PanelBody>{color}</PanelBody>

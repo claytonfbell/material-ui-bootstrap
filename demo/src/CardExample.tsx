@@ -14,7 +14,7 @@ export default function CardExample() {
       <Grid container spacing={3}>
         {bootstrapColors.map((color, idx) => (
           <React.Fragment key={idx}>
-            <Grid item xs={6} sm={3}>
+            <Grid item xs={6} md={3}>
               <Card color={color}>
                 <CardHeader>{color}</CardHeader>
                 <CardContent>
