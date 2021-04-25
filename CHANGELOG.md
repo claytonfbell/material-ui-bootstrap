@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.1...v2.2.2) (2021-04-25)
+
+
+### Bug Fixes
+
+* Fixed leaked corners on panel headings ([6fcef51](https://github.com/claytonfbell/material-ui-bootstrap/commit/6fcef51c138a678b0a4b891b988d44f4d9208f0a))
+
 ### [2.2.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.0...v2.2.1) (2021-04-25)
 
 
