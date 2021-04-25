@@ -11,9 +11,17 @@ import "../src/App.css"
 import ButtonExample from "../src/ButtonExample"
 import CardExample from "../src/CardExample"
 import TypographyExample from "../src/TypographyExample"
+import AlertSnippet from "./AlertSnippet"
+import ButtonSnippet from "./ButtonSnippet"
+import CardSnippet from "./CardSnippet"
 import { ExampleBox } from "./ExampleBox"
-import BadgeExample from "./LabelExample"
+import LabelExample from "./LabelExample"
+import LabelSnippet from "./LabelSnippet"
 import PanelExample from "./PanelExample"
+import PanelSnippet from "./PanelSnippet"
+import TooltipExample from "./TooltipExample"
+import TooltipSnippet from "./TooltipSnippet"
+import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
   const { createMuiThemeWithDarkMode } = useDarkMode()
@@ -80,25 +88,31 @@ function AppContent() {
         </Grid>
         <br />
 
-        <ExampleBox title="Button">
+        <ExampleBox title="Button" snippet={<ButtonSnippet />}>
           <ButtonExample />
         </ExampleBox>
 
-        <ExampleBox title="Alert">
+        <ExampleBox title="Label" snippet={<LabelSnippet />}>
+          <LabelExample />
+        </ExampleBox>
+
+        <ExampleBox title="Tooltip" snippet={<TooltipSnippet />}>
+          <TooltipExample />
+        </ExampleBox>
+
+        <ExampleBox title="Alert" snippet={<AlertSnippet />}>
           <AlertExample />
         </ExampleBox>
 
-        <ExampleBox title="Typography">
+        <ExampleBox title="Typography" snippet={<TypographySnippet />}>
           <TypographyExample />
         </ExampleBox>
 
-        <ExampleBox title="Card">
+        <ExampleBox title="Card" snippet={<CardSnippet />}>
           <CardExample />
         </ExampleBox>
-        <ExampleBox title="Label">
-          <BadgeExample />
-        </ExampleBox>
-        <ExampleBox title="Panel">
+
+        <ExampleBox title="Panel" snippet={<PanelSnippet />}>
           <PanelExample />
         </ExampleBox>
       </Container>

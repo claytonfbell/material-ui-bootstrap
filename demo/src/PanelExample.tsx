@@ -6,7 +6,6 @@ import {
   PanelHeader,
 } from "material-ui-bootstrap"
 import React from "react"
-import PanelSnippet from "./PanelSnippet"
 
 export default function PanelExample() {
   return (
@@ -23,9 +22,6 @@ export default function PanelExample() {
           </React.Fragment>
         ))}
       </Grid>
-      <br />
-      <PanelSnippet />
-      <br />
     </>
   )
 }

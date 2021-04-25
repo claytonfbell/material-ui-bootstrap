@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "material-ui-bootstrap"
 import React from "react"
-import CardSnippet from "./CardSnippet"
 
 export default function CardExample() {
   return (
@@ -27,9 +26,6 @@ export default function CardExample() {
           </React.Fragment>
         ))}
       </Grid>
-      <br />
-      <CardSnippet />
-      <br />
     </>
   )
 }

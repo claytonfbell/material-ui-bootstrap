@@ -1,19 +1,21 @@
 import React from "react"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
-export default function PanelSnippet() {
+export default function TooltipSnippet() {
   const codeString = `
+import { Button, Tooltip } from "material-ui-bootstrap"
 import React from "react"
-import { Panel, PanelBody, PanelHeader } from "material-ui-bootstrap"
 
-export default function PanelExample() {
-  return (
-    <Panel color="info">
-      <PanelHeader>Header</PanelHeader>
-      <PanelBody>Body</PanelBody>
-    </Panel>
+export default function TooltipExample() {
+return (
+    <Tooltip title="Tooltip Example" placement="right">
+        <Button color="primary" variant="contained">
+            Mouse Over
+        </Button>
+    </Tooltip>
   )
 }
+  
 `
   return (
     <SyntaxHighlighter language="javascript" style={docco}>
