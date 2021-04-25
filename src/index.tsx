@@ -18,6 +18,7 @@ import {
 } from "./Card"
 import { Label } from "./Label"
 import { Panel, PanelBody, PanelHeader } from "./Panel"
+import { Tooltip } from "./Tooltip"
 import { Typography } from "./Typography"
 
 export {
@@ -41,4 +42,5 @@ export {
   Panel,
   PanelHeader,
   PanelBody,
+  Tooltip,
 }
