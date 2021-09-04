@@ -25,31 +25,18 @@ const useStyles = makeStyles((theme: Theme) => {
     return bootstrapColors[x.color === undefined ? "dark" : x.color]
   }
 
-  // @ts-ignore
-  const htmlFontSize = theme.typography.htmlFontSize
-  const coef = theme.typography.fontSize / 14
-  const pxToRem = (size: number) => `${(size / htmlFontSize) * coef}rem`
-
   return {
     root: {
-      textTransform: "none",
-      boxShadow: "none",
-      borderRadius: pxToRem(4),
-      padding: (x: ButtonProps) =>
-        `${pxToRem(x.size === "large" ? 19 : x.size === "medium" ? 15 : 13)} ${
-          x.size === "large" ? 19 : x.size === "medium" ? 15 : 13
-        }`,
-      fontSize: (x: ButtonProps) =>
-        pxToRem(x.size === "large" ? 19 : x.size === "medium" ? 15 : 13),
-      lineHeight: "1.5",
+      textTransform: (props: ButtonProps) =>
+        props.uppercase === true ? undefined : "none",
+      boxShadow: (props: ButtonProps) =>
+        props.boxShadow === true ? undefined : "none",
       "&.Mui-disabled": {
         opacity: 0.3,
       },
       "&.MuiButton-contained": {
         color: (x: ButtonProps) => getColor(x).contrastText,
         backgroundColor: (x: ButtonProps) => getColor(x).main,
-        border: (x: ButtonProps) =>
-          `1px solid ${fade(darken(getColor(x).main, 0.3), 0.3)}`,
         "&:hover": {
           backgroundColor: (x: ButtonProps) => darken(getColor(x).main, 0.25),
         },
@@ -90,6 +77,8 @@ export type ButtonProps = Omit<MUIButtonProps, "color"> & {
   component?: any
   to?: string
   target?: string
+  uppercase?: boolean
+  boxShadow?: boolean
 }
 
 export const Button = React.forwardRef(function BootstrapButton(
@@ -104,4 +93,9 @@ export const Button = React.forwardRef(function BootstrapButton(
 Button.defaultProps = {
   size: "medium",
   color: "dark",
+}
+
+Button.defaultProps = {
+  uppercase: false,
+  boxShadow: false,
 }
