@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.3.0...v2.4.0) (2021-09-04)
+
+
+### Features
+
+* Removed button sizing, use your theme settings to override sizes ([3d63a49](https://github.com/claytonfbell/material-ui-bootstrap/commit/3d63a49da9985e5c70d83bc0def74e6bb736d141))
+
 ## [2.3.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.2.2...v2.3.0) (2021-04-25)
 
 
