@@ -1,10 +1,14 @@
-import Container from "@material-ui/core/Container"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import Grid from "@material-ui/core/Grid"
-import { ThemeProvider } from "@material-ui/core/styles"
-import GitHubIcon from "@material-ui/icons/GitHub"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import {
+  Container,
+  createTheme,
+  CssBaseline,
+  Grid,
+  ThemeProvider,
+} from "@mui/material"
+import Box from "@mui/system/Box"
 import { Button, Panel, PanelBody, Typography } from "material-ui-bootstrap"
-import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
+// import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import React from "react"
 import AlertExample from "../src/AlertExample"
 import "../src/App.css"
@@ -24,8 +28,8 @@ import TooltipSnippet from "./TooltipSnippet"
 import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
-  const { createMuiThemeWithDarkMode } = useDarkMode()
-  const theme = createMuiThemeWithDarkMode({
+  //   const { createMuiThemeWithDarkMode } = useDarkMode()
+  const theme = createTheme({
     palette: {
       primary: {
         main: "#337ab7",
@@ -33,6 +37,7 @@ function AppContent() {
       secondary: {
         main: "#69757d",
       },
+      mode: "dark",
     },
     typography: {
       htmlFontSize: 10,
@@ -45,7 +50,7 @@ function AppContent() {
         <CssBaseline />
 
         <br />
-        <Grid container justify="space-between">
+        <Grid container justifyContent="space-between">
           <Grid>
             <Typography variant="h3" component="h1" color="dark">
               material-ui-bootstrap
@@ -66,14 +71,23 @@ function AppContent() {
                     alt="Build Status"
                   />
                 </a>
-                <div>
-                  <code>npm install material-ui-bootstrap</code>
-                </div>
+                <Box marginTop={2}>
+                  <Typography>
+                    <strong>Install for MUI v5</strong>
+                  </Typography>
+                  <code>npm install material-ui-bootstrap@5</code>
+                </Box>
+                <Box marginTop={2}>
+                  <Typography>
+                    <strong>Install for MUI v4</strong>
+                  </Typography>
+                  <code>npm install material-ui-bootstrap@4</code>
+                </Box>
               </PanelBody>
             </Panel>
             <br />
             <br />
-            <DarkModeToggle />
+            {/* <DarkModeToggle /> */}
           </Grid>
           <Grid>
             <Button
@@ -122,8 +136,8 @@ function AppContent() {
 
 export default function App() {
   return (
-    <DarkModeProvider>
-      <AppContent />
-    </DarkModeProvider>
+    // <DarkModeProvider>
+    <AppContent />
+    // </DarkModeProvider>
   )
 }

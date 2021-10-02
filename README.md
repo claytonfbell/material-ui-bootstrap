@@ -20,11 +20,16 @@ If you prefer the [Material UI](https://material-ui.com/) api but also like Boot
 ## Install
 
 ```bash
-# npm
-npm i material-ui-bootstrap
+# use with mui v5
+npm i material-ui-bootstrap@5
+
+# use with mui v4
+npm i material-ui-bootstrap@4
 ```
 
 ## Button
+
+**DEPRECATED** MUI v5 provides bootstrap coloring, you can style the rest in your theme provider.
 
 Drop this in place of the material-ui `Button`. You may use the following color props: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`.
 
@@ -42,6 +47,8 @@ export default function App() {
 ```
 
 ## Alert
+
+**DEPRECATED** MUI v5 provides a nicer Alert component now.
 
 ```tsx
 import React from "react"

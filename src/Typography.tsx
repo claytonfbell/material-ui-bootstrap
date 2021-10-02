@@ -1,11 +1,23 @@
-import { makeStyles, Theme } from "@material-ui/core/styles"
 import MUITypography, {
   TypographyProps as MUITypographyProps,
-} from "@material-ui/core/Typography"
+} from "@mui/material/Typography"
+import useTheme from "@mui/system/useTheme"
 import React from "react"
 import { BootstrapColor } from "./bootstrapColors"
 
-const useStyles = makeStyles((theme: Theme) => {
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+export type TypographyProps = Omit<MUITypographyProps, "color"> & {
+  color?: BootstrapColor | "inherit"
+  component?: any
+}
+
+export const Typography = React.forwardRef(function BootstrapButton(
+  props: TypographyProps,
+  ref: any
+) {
+  const { color, ...otherProps } = props
+  const theme = useTheme()
   const bootstrapColors: {
     [key in BootstrapColor]: {
       color: string
@@ -37,40 +49,26 @@ const useStyles = makeStyles((theme: Theme) => {
     },
   }
 
-  function getColor(x: TypographyProps) {
-    return x.color === "inherit"
+  const colorProp =
+    color === "inherit"
       ? { color: undefined }
-      : bootstrapColors[x.color === undefined ? "dark" : x.color]
-  }
+      : bootstrapColors[color === undefined ? "dark" : color]
 
-  return {
-    root: {
-      color: (x: TypographyProps) => getColor(x).color,
-      "& a": {
-        color: (x: TypographyProps) => getColor(x).color,
-        fontWeight: "bolder",
-        textDecoration: "none",
-        "&:hover": {
-          textDecoration: "underline",
+  return (
+    <MUITypography
+      {...otherProps}
+      sx={{
+        color: colorProp,
+        "& a": {
+          color: colorProp.color,
+          fontWeight: "bolder",
+          textDecoration: "none",
+          "&:hover": {
+            textDecoration: "underline",
+          },
         },
-      },
-    },
-  }
-})
-
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
-
-export type TypographyProps = Omit<MUITypographyProps, "color"> & {
-  color?: BootstrapColor | "inherit"
-  component?: any
-}
-
-export const Typography = React.forwardRef(function BootstrapButton(
-  props: TypographyProps,
-  ref: any
-) {
-  const classes = useStyles(props)
-  const { color, ...otherProps } = props
-
-  return <MUITypography {...otherProps} classes={classes} ref={ref} />
+      }}
+      ref={ref}
+    />
+  )
 })

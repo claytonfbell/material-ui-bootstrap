@@ -1,16 +1,18 @@
 /**
  * Emulates the bootstrap alert boxes
  */
-import { Theme } from "@material-ui/core"
-import Fade from "@material-ui/core/Fade"
+import CloseIcon from "@mui/icons-material/Close"
+import Box from "@mui/material/Box"
+import Fade from "@mui/material/Fade"
 import {
+  alpha,
   darken,
-  fade,
   lighten,
-} from "@material-ui/core/styles/colorManipulator"
-import makeStyles from "@material-ui/core/styles/makeStyles"
-import CloseIcon from "@material-ui/icons/Close"
-import clsx from "clsx"
+  styled,
+  Theme,
+  useTheme,
+} from "@mui/material/styles"
+import { SxProps } from "@mui/system"
 import React from "react"
 import { BootstrapColor, bootstrapPalette } from "./bootstrapColors"
 import { Typography } from "./Typography"
@@ -26,94 +28,22 @@ export function bootstrapAlertStyles(color: BootstrapColor, theme: Theme) {
   const borderColor =
     color === "light" || color === "dark"
       ? theme.palette.divider
-      : fade(lighten(clr, 0.6), 0.8)
+      : alpha(lighten(clr, 0.6), 0.8)
   const backgroundColor =
     color === "light"
-      ? fade(theme.palette.text.secondary, 0.035)
+      ? alpha(theme.palette.text.secondary, 0.035)
       : color === "dark"
-      ? fade(theme.palette.text.primary, 0.95)
-      : fade(lighten(clr, 0.8), 0.95)
+      ? alpha(theme.palette.text.primary, 0.95)
+      : alpha(lighten(clr, 0.8), 0.95)
   const headerColor =
     color === "light"
-      ? fade(theme.palette.text.primary, 0.9)
+      ? alpha(theme.palette.text.primary, 0.9)
       : color === "dark"
-      ? fade(theme.palette.background.paper, 0.9)
+      ? alpha(theme.palette.background.paper, 0.9)
       : darken(clr, 0.6)
 
   return { borderColor, backgroundColor, headerColor }
 }
-
-const useStyles = (color: BootstrapColor) =>
-  makeStyles(theme => {
-    // @ts-ignore
-    const htmlFontSize = theme.typography.htmlFontSize
-    const coef = theme.typography.fontSize / 14
-    const pxToRem = (size: number) => `${(size / htmlFontSize) * coef}rem`
-
-    const { borderColor, backgroundColor, headerColor } = bootstrapAlertStyles(
-      color,
-      theme
-    )
-
-    return {
-      root: {
-        color: headerColor,
-        backgroundColor,
-        borderColor,
-        position: "relative",
-        border: "1px solid",
-        padding: `${pxToRem(12)} ${pxToRem(14)}`,
-        paddingRight: `${pxToRem(28)}`,
-        borderRadius: pxToRem(4),
-        "& a": {
-          color: headerColor,
-        },
-        "& p": {
-          margin: 0,
-        },
-      },
-
-      closeIcon: {
-        fontSize: pxToRem(18),
-        right: 12,
-        position: "absolute",
-        cursor: "pointer",
-        "&:hover": {
-          color: "#333",
-        },
-      },
-      /* Styles applied to the root element if `maxWidth="xs"`. */
-      maxWidthXs: {
-        [theme.breakpoints.up("xs")]: {
-          maxWidth: Math.max(theme.breakpoints.values.xs, 444),
-        },
-      },
-      /* Styles applied to the root element if `maxWidth="sm"`. */
-      maxWidthSm: {
-        [theme.breakpoints.up("sm")]: {
-          maxWidth: theme.breakpoints.values.sm,
-        },
-      },
-      /* Styles applied to the root element if `maxWidth="md"`. */
-      maxWidthMd: {
-        [theme.breakpoints.up("md")]: {
-          maxWidth: theme.breakpoints.values.md,
-        },
-      },
-      /* Styles applied to the root element if `maxWidth="lg"`. */
-      maxWidthLg: {
-        [theme.breakpoints.up("lg")]: {
-          maxWidth: theme.breakpoints.values.lg,
-        },
-      },
-      /* Styles applied to the root element if `maxWidth="xl"`. */
-      maxWidthXl: {
-        [theme.breakpoints.up("xl")]: {
-          maxWidth: theme.breakpoints.values.xl,
-        },
-      },
-    }
-  })
 
 export interface AlertProps {
   children: React.ReactNode
@@ -124,8 +54,20 @@ export interface AlertProps {
   maxWidth?: "xs" | "sm" | "md" | "lg" | "xl" | false
 }
 
+/**
+ * @deprecated MUI v5 has a better Alert component now!
+ */
 export function Alert(props: AlertProps) {
-  const classes = useStyles(props.color || "danger")(props)
+  const theme = useTheme()
+  const htmlFontSize = theme.typography.htmlFontSize
+  const coef = theme.typography.fontSize / 14
+  const pxToRem = (size: number) => `${(size / htmlFontSize) * coef}rem`
+
+  const { borderColor, backgroundColor, headerColor } = bootstrapAlertStyles(
+    props.color || "danger",
+    theme
+  )
+
   const [show, setShow] = React.useState<boolean>(true)
 
   React.useEffect(() => {
@@ -141,60 +83,109 @@ export function Alert(props: AlertProps) {
     }
   }
 
-  let maxWidthClass = classes.maxWidthMd
+  let maxWidthClass: SxProps<Theme> | undefined
   switch (props.maxWidth) {
     case "xl":
-      maxWidthClass = classes.maxWidthXl
+      maxWidthClass = {
+        [theme.breakpoints.up("xl")]: {
+          maxWidth: theme.breakpoints.values.xl,
+        },
+      }
       break
     case "lg":
-      maxWidthClass = classes.maxWidthLg
+      maxWidthClass = {
+        [theme.breakpoints.up("lg")]: {
+          maxWidth: theme.breakpoints.values.lg,
+        },
+      }
       break
     case "md":
-      maxWidthClass = classes.maxWidthMd
+      maxWidthClass = {
+        [theme.breakpoints.up("md")]: {
+          maxWidth: theme.breakpoints.values.md,
+        },
+      }
       break
     case "sm":
-      maxWidthClass = classes.maxWidthSm
+      maxWidthClass = {
+        [theme.breakpoints.up("sm")]: {
+          maxWidth: theme.breakpoints.values.sm,
+        },
+      }
       break
     case "xs":
-      maxWidthClass = classes.maxWidthXs
+      maxWidthClass = {
+        [theme.breakpoints.up("xs")]: {
+          maxWidth: Math.max(theme.breakpoints.values.xs, 444),
+        },
+      }
       break
   }
 
   return (
     <Fade in={show} unmountOnExit>
-      <div className={clsx(classes.root, maxWidthClass)}>
+      <Box
+        sx={{
+          color: headerColor,
+          backgroundColor,
+          borderColor,
+          position: "relative",
+          border: "1px solid",
+          padding: `${pxToRem(12)} ${pxToRem(14)}`,
+          paddingRight: `${pxToRem(28)}`,
+          borderRadius: pxToRem(4),
+          "& a": {
+            color: headerColor,
+          },
+          "& p": {
+            margin: 0,
+          },
+          ...maxWidthClass,
+        }}
+      >
         {props.dismissible && (
           <CloseIcon
             onClick={handleDismiss}
-            className={classes.closeIcon}
+            sx={{
+              fontSize: pxToRem(18),
+              right: 12,
+              position: "absolute",
+              cursor: "pointer",
+              "&:hover": {
+                color: "#333",
+              },
+            }}
             color="inherit"
           />
         )}
         <Typography color="inherit">{props.children}</Typography>
-      </div>
+      </Box>
     </Fade>
   )
 }
 
-const useStylesForHeading = makeStyles({
-  icon: {
-    marginRight: 10,
-    verticalAlign: -6,
-    "& > *:first-child": {
-      fontSize: 32,
-    },
-  },
-})
+const StyledSpan = styled("span")``
 
 export interface AlertHeadingProps {
   children: React.ReactNode
   icon?: React.ReactNode
 }
 function Heading(props: AlertHeadingProps) {
-  const classes = useStylesForHeading()
   return (
     <Typography color="inherit" variant="h5" component="h2">
-      {props.icon && <span className={classes.icon}>{props.icon}</span>}
+      {props.icon && (
+        <StyledSpan
+          sx={{
+            marginRight: 10,
+            verticalAlign: -6,
+            "& > *:first-child": {
+              fontSize: 32,
+            },
+          }}
+        >
+          {props.icon}
+        </StyledSpan>
+      )}
       {props.children}
     </Typography>
   )

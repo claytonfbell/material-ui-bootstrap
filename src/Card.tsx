@@ -1,34 +1,13 @@
-import MUICard, { CardProps as MUICardProps } from "@material-ui/core/Card"
-import { makeStyles, Theme } from "@material-ui/core/styles"
-import { fade, lighten } from "@material-ui/core/styles/colorManipulator"
+import Box from "@mui/material/Box"
+import MUICard, { CardProps as MUICardProps } from "@mui/material/Card"
+import { alpha, lighten, useTheme } from "@mui/material/styles"
 import React from "react"
 import { BootstrapColor, bootstrapPalette } from "./bootstrapColors"
 import { Typography } from "./Typography"
-export { default as CardActionArea } from "@material-ui/core/CardActionArea"
-export { default as CardActions } from "@material-ui/core/CardActions"
-export { default as CardContent } from "@material-ui/core/CardContent"
-export { default as CardMedia } from "@material-ui/core/CardMedia"
-
-const useStyles = (color: BootstrapColor) =>
-  makeStyles((theme: Theme) => {
-    const palette = bootstrapPalette(theme)
-    const backgroundColor = lighten(palette[color].main, 0.3)
-    const foreColor = palette[color].contrastText
-    return {
-      root: {
-        backgroundColor,
-        color: foreColor,
-        "& a": {
-          color: foreColor,
-          fontWeight: "bolder",
-          textDecoration: "none",
-          "&:hover": {
-            textDecoration: "underline",
-          },
-        },
-      },
-    }
-  })
+export { default as CardActionArea } from "@mui/material/CardActionArea"
+export { default as CardActions } from "@mui/material/CardActions"
+export { default as CardContent } from "@mui/material/CardContent"
+export { default as CardMedia } from "@mui/material/CardMedia"
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -40,11 +19,30 @@ export const Card = React.forwardRef(function BootstrapButton(
   props: CardProps,
   ref: any
 ) {
-  const classes = useStyles(props.color || "light")(props)
   const { color, ...otherProps } = props
+  const theme = useTheme()
+  const palette = bootstrapPalette(theme)
+  const backgroundColor = lighten(palette[color || "light"].main, 0.3)
+  const foreColor = palette[color || "light"].contrastText
 
   return (
-    <MUICard {...otherProps} classes={classes} ref={ref} variant="outlined" />
+    <MUICard
+      {...otherProps}
+      sx={{
+        backgroundColor,
+        color: foreColor,
+        "& a": {
+          color: foreColor,
+          fontWeight: "bolder",
+          textDecoration: "none",
+          "&:hover": {
+            textDecoration: "underline",
+          },
+        },
+      }}
+      ref={ref}
+      variant="outlined"
+    />
   )
 })
 
@@ -53,17 +51,17 @@ export interface CardHeaderProps {
 }
 
 export function CardHeader(props: CardHeaderProps) {
-  const classes = makeStyles((theme: Theme) => ({
-    root: {
-      padding: `10px 14px 10px 14px`,
-      backgroundColor: fade("#000", 0.1),
-      borderBottom: `1px solid ${theme.palette.divider}`,
-    },
-  }))()
+  const theme = useTheme()
   return (
-    <div className={classes.root}>
+    <Box
+      sx={{
+        padding: `10px 14px 10px 14px`,
+        backgroundColor: alpha("#000", 0.1),
+        borderBottom: `1px solid ${theme.palette.divider}`,
+      }}
+    >
       <Typography color="inherit">{props.children}</Typography>
-    </div>
+    </Box>
   )
 }
 

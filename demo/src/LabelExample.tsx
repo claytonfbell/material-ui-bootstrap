@@ -1,5 +1,5 @@
-import { Typography } from "@material-ui/core"
-import Grid from "@material-ui/core/Grid"
+import { Typography } from "@mui/material"
+import Grid from "@mui/material/Grid"
 import { bootstrapColors, Label } from "material-ui-bootstrap"
 import React from "react"
 
