@@ -1,11 +1,11 @@
 # material-ui-bootstrap
 
+[DEMO HERE https://material-ui-bootstrap.xyz](https://material-ui-bootstrap.xyz)
+
 [![npm version](https://badge.fury.io/js/material-ui-bootstrap.svg)](https://badge.fury.io/js/material-ui-bootstrap)
 [![Build Status](https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master)](https://travis-ci.org/claytonfbell/material-ui-bootstrap)
 
 If you prefer the [Material UI](https://material-ui.com/) api but also like Bootstrap's clean buttons and useful color variants then this package is here for you. It wraps material-ui's `<Button>` and `<Card>` and `<Typography>` components and adds a new component `<Alert>`. Inspired by <https://react-bootstrap.github.io>.
-
-[DEMO HERE](https://material-ui-bootstrap.xyz)
 
 [CHANGELOG.md](./CHANGELOG.md)
 
