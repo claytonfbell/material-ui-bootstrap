@@ -1,14 +1,8 @@
 import GitHubIcon from "@mui/icons-material/GitHub"
-import {
-  Container,
-  createTheme,
-  CssBaseline,
-  Grid,
-  ThemeProvider,
-} from "@mui/material"
+import { Container, CssBaseline, Grid, ThemeProvider } from "@mui/material"
 import Box from "@mui/system/Box"
 import { Button, Panel, PanelBody, Typography } from "material-ui-bootstrap"
-// import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
+import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import React from "react"
 import AlertExample from "../src/AlertExample"
 import "../src/App.css"
@@ -28,8 +22,8 @@ import TooltipSnippet from "./TooltipSnippet"
 import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
-  //   const { createMuiThemeWithDarkMode } = useDarkMode()
-  const theme = createTheme({
+  const { createMuiThemeWithDarkMode } = useDarkMode()
+  const theme = createMuiThemeWithDarkMode({
     palette: {
       primary: {
         main: "#337ab7",
@@ -87,7 +81,7 @@ function AppContent() {
             </Panel>
             <br />
             <br />
-            {/* <DarkModeToggle /> */}
+            <DarkModeToggle />
           </Grid>
           <Grid>
             <Button
@@ -136,8 +130,8 @@ function AppContent() {
 
 export default function App() {
   return (
-    // <DarkModeProvider>
-    <AppContent />
-    // </DarkModeProvider>
+    <DarkModeProvider>
+      <AppContent />
+    </DarkModeProvider>
   )
 }
