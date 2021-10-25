@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.0.0...v5.0.1) (2021-10-25)
+
+
+### Bug Fixes
+
+* Fixed some React warnings ([a212f43](https://github.com/claytonfbell/material-ui-bootstrap/commit/a212f43a5d8a3c0d21da2348ffdf2cfd90f84bb0))
+
 ## [5.0.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v4.0.0...v5.0.0) (2021-10-03)
 
 
