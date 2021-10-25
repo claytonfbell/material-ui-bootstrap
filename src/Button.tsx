@@ -23,7 +23,7 @@ export const Button = React.forwardRef(function BootstrapButton(
   ref: any
 ) {
   //   const classes = useStyles(props)
-  const { color, ...otherProps } = props
+  const { color, uppercase, boxShadow, ...otherProps } = props
 
   const theme = useTheme()
   const bootstrapColors: {
@@ -43,8 +43,8 @@ export const Button = React.forwardRef(function BootstrapButton(
     <MUIButton
       {...otherProps}
       sx={{
-        textTransform: props.uppercase === true ? undefined : "none",
-        boxShadow: props.boxShadow === true ? undefined : "none",
+        textTransform: uppercase === true ? undefined : "none",
+        boxShadow: boxShadow === true ? undefined : "none",
         "&.Mui-disabled": {
           opacity: 0.3,
         },
