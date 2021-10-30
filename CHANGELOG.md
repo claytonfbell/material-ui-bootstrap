@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.0.1...v5.1.0) (2021-10-30)
+
+
+### Features
+
+* Added new Tabs component ([3029d48](https://github.com/claytonfbell/material-ui-bootstrap/commit/3029d48662d9f6ec851877c393f0bc20b2a20799))
+
 ### [5.0.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.0.0...v5.0.1) (2021-10-25)
 
 
