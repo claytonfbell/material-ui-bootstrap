@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v4.0.0...v4.1.0) (2021-10-30)
+
+
+### Features
+
+* Added new Tabs component ([237cd4f](https://github.com/claytonfbell/material-ui-bootstrap/commit/237cd4fbc996cbdb619226a34d6e0882a08c19f1))
+
 ## [4.0.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.4.0...v4.0.0) (2021-10-02)
 
 ## [2.4.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v2.3.0...v2.4.0) (2021-09-04)
