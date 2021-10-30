@@ -17,12 +17,14 @@ import LabelExample from "./LabelExample"
 import LabelSnippet from "./LabelSnippet"
 import PanelExample from "./PanelExample"
 import PanelSnippet from "./PanelSnippet"
+import { TabsExample } from "./TabsExample"
+import { TabsSnippet } from "./TabsSnippet"
 import TooltipExample from "./TooltipExample"
 import TooltipSnippet from "./TooltipSnippet"
 import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
-  const { createMuiThemeWithDarkMode } = useDarkMode()
+  const { createMuiThemeWithDarkMode, darkMode } = useDarkMode()
   const theme = createMuiThemeWithDarkMode({
     palette: {
       primary: {
@@ -31,7 +33,13 @@ function AppContent() {
       secondary: {
         main: "#69757d",
       },
-      mode: "dark",
+      ...(!darkMode
+        ? {
+            background: {
+              default: "#eee",
+            },
+          }
+        : undefined),
     },
     typography: {
       htmlFontSize: 10,
@@ -95,6 +103,10 @@ function AppContent() {
           </Grid>
         </Grid>
         <br />
+
+        <ExampleBox title="Tabs" snippet={<TabsSnippet />}>
+          <TabsExample />
+        </ExampleBox>
 
         <ExampleBox title="Button" snippet={<ButtonSnippet />}>
           <ButtonExample />
