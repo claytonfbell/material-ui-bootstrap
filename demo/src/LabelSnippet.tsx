@@ -1,6 +1,5 @@
 import React from "react"
-import SyntaxHighlighter from "react-syntax-highlighter"
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import { Snippet } from "./Snippet"
 export default function LabelSnippet() {
   const codeString = `
 import React from "react"
@@ -12,9 +11,5 @@ export default function LabelExample() {
   )
 }
 `
-  return (
-    <SyntaxHighlighter language="javascript" style={docco}>
-      {codeString}
-    </SyntaxHighlighter>
-  )
+  return <Snippet>{codeString}</Snippet>
 }

@@ -1,6 +1,6 @@
 import React from "react"
-import SyntaxHighlighter from "react-syntax-highlighter"
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import { Snippet } from "./Snippet"
+
 export default function TooltipSnippet() {
   const codeString = `
 import { Button, Tooltip } from "material-ui-bootstrap"
@@ -17,9 +17,5 @@ return (
 }
   
 `
-  return (
-    <SyntaxHighlighter language="javascript" style={docco}>
-      {codeString}
-    </SyntaxHighlighter>
-  )
+  return <Snippet>{codeString}</Snippet>
 }
