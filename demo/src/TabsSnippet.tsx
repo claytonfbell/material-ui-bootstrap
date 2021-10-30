@@ -3,7 +3,6 @@ import SyntaxHighlighter from "react-syntax-highlighter"
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs"
 export function TabsSnippet() {
   const codeString = `
-  import { Box } from "@mui/material"
   import { Tabs } from "material-ui-bootstrap"
   import React, { useState } from "react"
   
@@ -15,12 +14,13 @@ export function TabsSnippet() {
         onSelect={newIndex => setSelected(newIndex)}
         tabs={["Cat", "Dog", "Bird"]}
       >
-        {selected === 0 ? <Box>Cat</Box> : null}
-        {selected === 1 ? <Box>Dog</Box> : null}
-        {selected === 2 ? <Box>Bird</Box> : null}
+        {selected === 0 ? <>Cat</> : null}
+        {selected === 1 ? <>Dog</> : null}
+        {selected === 2 ? <>Bird</> : null}
       </Tabs>
     )
   }
+  
   
 `
   return (
