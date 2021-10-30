@@ -19,6 +19,8 @@ import LabelExample from "./LabelExample"
 import LabelSnippet from "./LabelSnippet"
 import PanelExample from "./PanelExample"
 import PanelSnippet from "./PanelSnippet"
+import { TabsExample } from "./TabsExample"
+import { TabsSnippet } from "./TabsSnippet"
 import TooltipExample from "./TooltipExample"
 import TooltipSnippet from "./TooltipSnippet"
 import TypographySnippet from "./TypographySnippet"
@@ -47,7 +49,7 @@ function AppContent() {
         <br />
         <Grid container justify="space-between">
           <Grid>
-            <Typography variant="h3" component="h1" color="dark">
+            <Typography variant="h3" component="h1">
               material-ui-bootstrap
             </Typography>
             <br />
@@ -87,6 +89,10 @@ function AppContent() {
           </Grid>
         </Grid>
         <br />
+
+        <ExampleBox title="Tabs" snippet={<TabsSnippet />}>
+          <TabsExample />
+        </ExampleBox>
 
         <ExampleBox title="Button" snippet={<ButtonSnippet />}>
           <ButtonExample />
