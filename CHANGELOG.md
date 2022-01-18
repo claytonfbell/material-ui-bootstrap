@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.1...v5.2.2) (2022-01-18)
+
+
+### Bug Fixes
+
+* removed support for Tooltip component to resolve a typescript problem with styled components ([835961e](https://github.com/claytonfbell/material-ui-bootstrap/commit/835961e9a84c2e4582eff6f3f2dd66f49ac52289))
+
 ### [5.2.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.0...v5.2.1) (2022-01-18)
 
 
