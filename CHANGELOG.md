@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.1.1...v5.2.0) (2022-01-18)
+
+
+### Features
+
+* mui v5.3 ([5960933](https://github.com/claytonfbell/material-ui-bootstrap/commit/5960933b7bb7cc198d80fc3eee7c5d5babd0107b))
+
 ### [5.1.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.1.0...v5.1.1) (2021-10-30)
 
 ## [5.1.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.0.1...v5.1.0) (2021-10-30)
