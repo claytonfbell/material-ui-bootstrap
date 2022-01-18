@@ -1,11 +1,7 @@
 import Alert from "@mui/material/Alert"
 import Grid from "@mui/material/Grid"
-import {
-  bootstrapColors,
-  Button,
-  Tooltip,
-  Typography,
-} from "material-ui-bootstrap"
+import Tooltip from "@mui/material/Tooltip"
+import { bootstrapColors, Button, Typography } from "material-ui-bootstrap"
 import React from "react"
 
 export default function ButtonExample() {

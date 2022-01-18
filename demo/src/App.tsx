@@ -22,8 +22,6 @@ import PanelExample from "./PanelExample"
 import PanelSnippet from "./PanelSnippet"
 import { TabsExample } from "./TabsExample"
 import { TabsSnippet } from "./TabsSnippet"
-import TooltipExample from "./TooltipExample"
-import TooltipSnippet from "./TooltipSnippet"
 import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
@@ -133,10 +131,6 @@ function AppContent() {
 
         <ExampleBox title="Panel" snippet={<PanelSnippet />}>
           <PanelExample />
-        </ExampleBox>
-
-        <ExampleBox title="Tooltip" snippet={<TooltipSnippet />}>
-          <TooltipExample />
         </ExampleBox>
       </Container>
     </ThemeProvider>

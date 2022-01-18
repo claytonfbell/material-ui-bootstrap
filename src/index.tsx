@@ -19,7 +19,6 @@ import {
 import { Label } from "./Label"
 import { Panel, PanelBody, PanelHeader } from "./Panel"
 import { Tabs, TabsProps } from "./Tabs"
-import { Tooltip } from "./Tooltip"
 import { Typography } from "./Typography"
 
 export {
@@ -43,7 +42,6 @@ export {
   Panel,
   PanelHeader,
   PanelBody,
-  Tooltip,
   Tabs,
   TabsProps,
 }
