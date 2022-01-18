@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.0...v5.2.1) (2022-01-18)
+
+
+### Bug Fixes
+
+* Cleanup ts dependency conflict ([57cc65d](https://github.com/claytonfbell/material-ui-bootstrap/commit/57cc65df463a9c19e64fb30fe03aac49938f18f2))
+
 ## [5.2.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.1.1...v5.2.0) (2022-01-18)
 
 
