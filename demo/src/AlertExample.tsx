@@ -1,13 +1,11 @@
 import MUIAlert from "@mui/material/Alert"
 import Grid from "@mui/material/Grid"
-import { Alert, bootstrapColors, Typography } from "material-ui-bootstrap"
+import { Alert, bootstrapColors } from "material-ui-bootstrap"
 import React from "react"
 
 export default function AlertExample() {
   return (
     <>
-      <Typography color="warning"></Typography>
-
       <MUIAlert severity="warning">
         DEPRECATED: MUI v5 has a better Alert component now!
       </MUIAlert>
