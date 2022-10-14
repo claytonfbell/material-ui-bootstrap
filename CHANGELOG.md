@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.3](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.2...v5.2.3) (2022-10-14)
+
+
+### Bug Fixes
+
+* Removed the diableRipple on tabs which is useful for accessiblility ([af7bf9a](https://github.com/claytonfbell/material-ui-bootstrap/commit/af7bf9abfc139ca352a3dfc5c6c67d2135ddff92))
+
 ### [5.2.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.1...v5.2.2) (2022-01-18)
 
 
