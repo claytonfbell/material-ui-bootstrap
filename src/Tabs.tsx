@@ -48,7 +48,6 @@ export const Tabs = React.forwardRef(function(
           })
           .map((tab, index) => (
             <MuiTab
-              disableRipple
               key={index}
               {...tab}
               value={index}
