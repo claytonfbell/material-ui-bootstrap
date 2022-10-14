@@ -15,7 +15,7 @@
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
-    "material-ui-bootstrap": "^5.1.0",
+    "material-ui-bootstrap": "^5.2.3",
     "material-ui-pack": "^5.1.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
