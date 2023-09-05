@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.3...v5.3.0) (2023-09-05)
+
+
+### Features
+
+* migrated to tsup ([c138156](https://github.com/claytonfbell/material-ui-bootstrap/commit/c138156e2fbba518219b1009c1c0dc7926646ad2))
+
 ### [5.2.3](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.2.2...v5.2.3) (2022-10-14)
 
 
