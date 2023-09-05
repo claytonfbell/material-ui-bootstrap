@@ -1,19 +1,15 @@
 import GitHubIcon from "@mui/icons-material/GitHub"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 import Container from "@mui/material/Container"
 import CssBaseline from "@mui/material/CssBaseline"
 import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography"
 import ThemeProvider from "@mui/material/styles/ThemeProvider"
-import { Button, Panel, PanelBody, Typography } from "material-ui-bootstrap"
+import { Panel, PanelBody } from "material-ui-bootstrap"
 import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
-import React from "react"
-import AlertExample from "../src/AlertExample"
 import "../src/App.css"
-import ButtonExample from "../src/ButtonExample"
 import CardExample from "../src/CardExample"
-import TypographyExample from "../src/TypographyExample"
-import AlertSnippet from "./AlertSnippet"
-import ButtonSnippet from "./ButtonSnippet"
 import CardSnippet from "./CardSnippet"
 import { ExampleBox } from "./ExampleBox"
 import LabelExample from "./LabelExample"
@@ -22,7 +18,6 @@ import PanelExample from "./PanelExample"
 import PanelSnippet from "./PanelSnippet"
 import { TabsExample } from "./TabsExample"
 import { TabsSnippet } from "./TabsSnippet"
-import TypographySnippet from "./TypographySnippet"
 
 function AppContent() {
   const { createMuiThemeWithDarkMode, darkMode } = useDarkMode()
@@ -109,20 +104,8 @@ function AppContent() {
           <TabsExample />
         </ExampleBox>
 
-        <ExampleBox title="Button" snippet={<ButtonSnippet />}>
-          <ButtonExample />
-        </ExampleBox>
-
         <ExampleBox title="Label" snippet={<LabelSnippet />}>
           <LabelExample />
-        </ExampleBox>
-
-        <ExampleBox title="Typography" snippet={<TypographySnippet />}>
-          <TypographyExample />
-        </ExampleBox>
-
-        <ExampleBox title="Alert" snippet={<AlertSnippet />}>
-          <AlertExample />
         </ExampleBox>
 
         <ExampleBox title="Card" snippet={<CardSnippet />}>

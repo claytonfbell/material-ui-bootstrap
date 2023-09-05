@@ -1,9 +1,7 @@
-import { Alert } from "./Alert"
 import bootstrapColors, {
   BootstrapColor,
   bootstrapPalette,
 } from "./bootstrapColors"
-import { Button } from "./Button"
 import {
   Card,
   CardActionArea,
@@ -19,12 +17,8 @@ import {
 import { Label } from "./Label"
 import { Panel, PanelBody, PanelHeader } from "./Panel"
 import { Tabs, TabsProps } from "./Tabs"
-import { Typography } from "./Typography"
 
 export {
-  Alert,
-  Typography,
-  Button,
   Card,
   bootstrapColors,
   bootstrapPalette,
