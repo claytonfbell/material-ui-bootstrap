@@ -1,7 +1,4 @@
-import bootstrapColors, {
-  BootstrapColor,
-  bootstrapPalette,
-} from "./bootstrapColors"
+import bootstrapColors, { BootstrapColor } from "./bootstrapColors"
 import {
   Card,
   CardActionArea,
@@ -21,7 +18,6 @@ import { Tabs, TabsProps } from "./Tabs"
 export {
   Card,
   bootstrapColors,
-  bootstrapPalette,
   BootstrapColor,
   CardContent,
   CardHeader,

@@ -1,6 +1,6 @@
-import { alpha, styled, useTheme } from "@mui/material/styles"
+import { styled, useTheme } from "@mui/material/styles"
 import React from "react"
-import { BootstrapColor, bootstrapPalette } from "."
+import { BootstrapColor } from "."
 
 export interface LabelProps {
   color: BootstrapColor
@@ -11,14 +11,8 @@ const StyledSpan = styled("span")``
 
 export function Label(props: LabelProps) {
   const theme = useTheme()
-  const palette = bootstrapPalette(theme)
-  const foreColor = palette[props.color].contrastText
-  const backgroundColor =
-    props.color === "light"
-      ? alpha(theme.palette.text.secondary, 0.1)
-      : props.color === "dark"
-      ? alpha(theme.palette.text.primary, 0.85)
-      : palette[props.color].main
+  const foreColor = theme.palette[props.color].contrastText
+  const backgroundColor = theme.palette[props.color].main
 
   return (
     <StyledSpan

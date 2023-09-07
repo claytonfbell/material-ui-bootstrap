@@ -4,9 +4,9 @@ import Button from "@mui/material/Button"
 import Container from "@mui/material/Container"
 import CssBaseline from "@mui/material/CssBaseline"
 import Grid from "@mui/material/Grid"
+import Paper from "@mui/material/Paper"
 import Typography from "@mui/material/Typography"
 import ThemeProvider from "@mui/material/styles/ThemeProvider"
-import { Panel, PanelBody } from "material-ui-bootstrap"
 import { DarkModeProvider, DarkModeToggle, useDarkMode } from "material-ui-pack"
 import "../src/App.css"
 import CardExample from "../src/CardExample"
@@ -54,35 +54,27 @@ function AppContent() {
               material-ui-bootstrap
             </Typography>
             <br />
-            <Panel color="light">
-              <PanelBody>
-                <a href="https://badge.fury.io/js/material-ui-bootstrap">
-                  <img
-                    src="https://badge.fury.io/js/material-ui-bootstrap.svg"
-                    alt="npm version"
-                  />
-                </a>
-                &nbsp;
-                <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
-                  <img
-                    src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
-                    alt="Build Status"
-                  />
-                </a>
-                <Box marginTop={2}>
-                  <Typography>
-                    <strong>Install for MUI v5</strong>
-                  </Typography>
-                  <code>npm install material-ui-bootstrap@5</code>
-                </Box>
-                <Box marginTop={2}>
-                  <Typography>
-                    <strong>Install for MUI v4</strong>
-                  </Typography>
-                  <code>npm install material-ui-bootstrap@4</code>
-                </Box>
-              </PanelBody>
-            </Panel>
+            <Paper variant="outlined" sx={{ padding: 2 }}>
+              <a href="https://badge.fury.io/js/material-ui-bootstrap">
+                <img
+                  src="https://badge.fury.io/js/material-ui-bootstrap.svg"
+                  alt="npm version"
+                />
+              </a>
+              &nbsp;
+              <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
+                <img
+                  src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
+                  alt="Build Status"
+                />
+              </a>
+              <Box marginTop={2}>
+                <Typography>
+                  <strong>Install for MUI v5</strong>
+                </Typography>
+                <code>npm install material-ui-bootstrap@5</code>
+              </Box>
+            </Paper>
             <br />
             <br />
             <DarkModeToggle />

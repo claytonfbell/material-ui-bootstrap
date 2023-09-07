@@ -1,32 +1,13 @@
 import Box from "@mui/material/Box"
 import { Theme, alpha, darken, lighten, useTheme } from "@mui/material/styles"
 import React, { useContext } from "react"
-import { BootstrapColor, bootstrapPalette } from "./bootstrapColors"
+import { BootstrapColor } from "./bootstrapColors"
 
 export function bootstrapAlertStyles(color: BootstrapColor, theme: Theme) {
-  const palette = bootstrapPalette(theme)
-  const clr =
-    color === "light"
-      ? theme.palette.text.secondary
-      : color === "dark"
-      ? theme.palette.text.primary
-      : palette[color].main
-  const borderColor =
-    color === "light" || color === "dark"
-      ? theme.palette.divider
-      : alpha(lighten(clr, 0.6), 0.8)
-  const backgroundColor =
-    color === "light"
-      ? alpha(theme.palette.text.secondary, 0.035)
-      : color === "dark"
-      ? alpha(theme.palette.text.primary, 0.95)
-      : alpha(lighten(clr, 0.8), 0.95)
-  const headerColor =
-    color === "light"
-      ? alpha(theme.palette.text.primary, 0.9)
-      : color === "dark"
-      ? alpha(theme.palette.background.paper, 0.9)
-      : darken(clr, 0.6)
+  const clr = theme.palette[color].main
+  const borderColor = alpha(lighten(clr, 0.6), 0.8)
+  const backgroundColor = alpha(lighten(clr, 0.8), 0.95)
+  const headerColor = darken(clr, 0.6)
 
   return { borderColor, backgroundColor, headerColor }
 }

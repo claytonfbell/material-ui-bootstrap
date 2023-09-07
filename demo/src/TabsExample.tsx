@@ -6,7 +6,7 @@ export function TabsExample() {
   return (
     <Tabs
       selectedIndex={selected}
-      onSelect={newIndex => setSelected(newIndex)}
+      onSelect={(newIndex) => setSelected(newIndex)}
       tabs={["Cat", "Dog", "Bird"]}
     >
       {selected === 0 ? <>Cat</> : null}

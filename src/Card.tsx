@@ -2,7 +2,7 @@ import Box from "@mui/material/Box"
 import MUICard, { CardProps as MUICardProps } from "@mui/material/Card"
 import { alpha, lighten, useTheme } from "@mui/material/styles"
 import React from "react"
-import { BootstrapColor, bootstrapPalette } from "./bootstrapColors"
+import { BootstrapColor } from "./bootstrapColors"
 import Typography from "@mui/material/Typography"
 export { default as CardActionArea } from "@mui/material/CardActionArea"
 export { default as CardActions } from "@mui/material/CardActions"
@@ -21,9 +21,8 @@ export const Card = React.forwardRef(function BootstrapButton(
 ) {
   const { color, ...otherProps } = props
   const theme = useTheme()
-  const palette = bootstrapPalette(theme)
-  const backgroundColor = lighten(palette[color || "light"].main, 0.3)
-  const foreColor = palette[color || "light"].contrastText
+  const backgroundColor = lighten(theme.palette[color || "primary"].main, 0.3)
+  const foreColor = theme.palette[color || "primary"].contrastText
 
   return (
     <MUICard
