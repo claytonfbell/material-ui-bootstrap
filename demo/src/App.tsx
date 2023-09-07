@@ -61,13 +61,6 @@ function AppContent() {
                   alt="npm version"
                 />
               </a>
-              &nbsp;
-              <a href="https://travis-ci.org/claytonfbell/material-ui-bootstrap">
-                <img
-                  src="https://travis-ci.org/claytonfbell/material-ui-bootstrap.svg?branch=master"
-                  alt="Build Status"
-                />
-              </a>
               <Box marginTop={2}>
                 <Typography>
                   <strong>Install for MUI v5</strong>
