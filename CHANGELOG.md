@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.4.0](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.3.2...v5.4.0) (2023-09-07)
+
+
+### Features
+
+* use mui’s palette colors ([ba08fd6](https://github.com/claytonfbell/material-ui-bootstrap/commit/ba08fd6605bbd8efd2c233a0e09961949ba1ab73))
+
 ### [5.3.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.3.1...v5.3.2) (2023-09-05)
 
 ### [5.3.1](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.3.0...v5.3.1) (2023-09-05)
