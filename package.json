@@ -30,7 +30,6 @@
   },
   "name": "material-ui-bootstrap",
   "author": "Clay Bell",
-  "module": "dist/material-ui-bootstrap.esm.js",
   "devDependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
