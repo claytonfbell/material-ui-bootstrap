@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.4.4](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.4.3...v5.4.4) (2023-09-11)
+
 ### [5.4.3](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.4.2...v5.4.3) (2023-09-07)
 
 ### [5.4.2](https://github.com/claytonfbell/material-ui-bootstrap/compare/v5.4.1...v5.4.2) (2023-09-07)
