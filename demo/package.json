@@ -8,32 +8,20 @@
     "@mui/icons-material": "^5.14.7",
     "@mui/lab": "^5.0.0-alpha.142",
     "@mui/material": "^5.14.7",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.31",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "material-ui-bootstrap": "^5.4.0",
-    "material-ui-pack": "^5.5.2",
+    "material-ui-bootstrap": "^5.4.4",
+    "material-ui-pack": "^5.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "react-syntax-highlighter": "^15.4.3",
-    "typescript": "^4.2.2",
-    "web-vitals": "^1.0.1"
+    "react-syntax-highlighter": "^15.4.3"
   },
   "scripts": {
-    "start": "npm link ../ ../node_modules/react ../node_modules/@mui/material && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -49,6 +37,13 @@
     ]
   },
   "devDependencies": {
-    "@types/react-syntax-highlighter": "^13.5.0"
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-syntax-highlighter": "^13.5.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "web-vitals": "^3.4.0"
   }
 }
